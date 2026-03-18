@@ -34,34 +34,34 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" />
+      <section className="relative py-20 md:py-32 overflow-hidden hero-gradient">
+        <div className="absolute inset-0 opacity-20" />
         <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="inline-block px-3 py-1 bg-accent/20 rounded-full text-sm font-medium text-accent">
+            <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
               Professional Services
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Clarity and Direction Through Conflict
             </h1>
-            <p className="text-lg text-muted-foreground max-w-lg">
+            <p className="text-lg text-white/90 max-w-lg">
               Professional family law mediation and social work services supporting individuals through complex life transitions with structure, fairness, and care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <button className="cta-button-secondary inline-flex items-center justify-center">
                 Explore Services <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button size="lg" variant="outline">
+              </button>
+              <button className="px-6 py-3 rounded-full font-semibold text-white border-2 border-white hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </Button>
+              </button>
             </div>
-            <div className="flex gap-6 pt-8 text-sm text-muted-foreground">
+            <div className="flex gap-6 pt-8 text-sm text-white/80">
               <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-accent" />
+                <Check className="w-4 h-4 text-white" />
                 <span>FAMAC Accredited Mediator</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-accent" />
+                <Check className="w-4 h-4 text-white" />
                 <span>SASW Registered Social Worker</span>
               </div>
             </div>
@@ -75,6 +75,15 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Slogan Section */}
+      <section className="py-8 md:py-12 bg-white border-b-4 border-accent">
+        <div className="container text-center">
+          <p className="slogan">
+            Changing <span className="slogan-highlight">SCARS</span> into <span className="slogan-highlight">STARS</span> — One <span className="slogan-highlight">BATTLE</span> at a time
+          </p>
         </div>
       </section>
 
@@ -167,9 +176,9 @@ export default function Home() {
             </Link>
           </div>
 
-          <Button variant="outline" className="border-accent text-accent hover:bg-accent/10">
+          <button className="cta-button-secondary inline-flex items-center">
             All Mediation Services <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+          </button>
         </div>
       </section>
 
@@ -247,9 +256,9 @@ export default function Home() {
             </Link>
           </div>
 
-          <Button variant="outline" className="border-accent text-accent hover:bg-accent/10">
+          <button className="cta-button-secondary inline-flex items-center">
             All Social Work Services <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+          </button>
         </div>
       </section>
 
@@ -370,7 +379,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-primary/80">
+      <section className="py-16 md:py-24 hero-gradient">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Move Forward?
@@ -378,9 +387,9 @@ export default function Home() {
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Professional support begins with a clear conversation. Contact MediMagic today to request guidance through your situation.
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <button className="cta-button-secondary inline-flex items-center">
             Get Started Today <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+          </button>
         </div>
       </section>
 
