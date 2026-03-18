@@ -16,10 +16,12 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">M</span>
-            </div>
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/medimagic_logo_e9a0b25b.webp" 
+              alt="MediMagic Logo"
+              className="h-10 w-auto"
+            />
             <span className="font-bold text-lg text-foreground">MediMagic</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
@@ -34,8 +36,15 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden hero-gradient">
-        <div className="absolute inset-0 opacity-20" />
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/hero-background-blend-JZD7f87nMVdv9t2kUKzGtK.webp)',
+            backgroundBlendMode: 'overlay'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-teal-600/70 to-accent/60" />
         <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
