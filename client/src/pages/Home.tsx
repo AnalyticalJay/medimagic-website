@@ -44,7 +44,7 @@ export default function Home() {
             backgroundBlendMode: 'overlay'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-teal-600/70 to-accent/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-teal-600/75 to-teal-500/50" />
         <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
@@ -75,23 +75,23 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="hidden md:block relative">
-            <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=600&fit=crop" 
-                alt="Professional mediation session"
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div className="hidden md:block relative h-96">
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/hero-transparent-figure-BC2ustRT4KYCNceJzrr4LG.webp" 
+              alt="Professional support figure"
+              className="w-full h-full object-contain object-right opacity-90"
+            />
           </div>
         </div>
       </section>
 
       {/* Slogan Section */}
-      <section className="py-8 md:py-12 bg-white border-b-4 border-accent">
-        <div className="container text-center">
-          <p className="slogan">
-            Changing <span className="slogan-highlight">SCARS</span> into <span className="slogan-highlight">STARS</span> — One <span className="slogan-highlight">BATTLE</span> at a time
+      <section className="py-12 md:py-16 bg-gradient-to-r from-primary/5 to-teal-500/5 border-y-4 border-accent relative overflow-hidden">
+        <div className="absolute top-4 right-8 text-accent/20 text-6xl">✦</div>
+        <div className="absolute bottom-4 left-8 text-accent/20 text-5xl">✦</div>
+        <div className="container text-center relative z-10">
+          <p className="slogan text-2xl md:text-3xl font-bold">
+            Changing <span className="slogan-highlight text-3xl md:text-4xl">SCARS</span> into <span className="slogan-highlight text-3xl md:text-4xl">STARS</span> — One <span className="slogan-highlight text-3xl md:text-4xl">BATTLE</span> at a time
           </p>
         </div>
       </section>
