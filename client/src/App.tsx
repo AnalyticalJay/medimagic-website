@@ -5,18 +5,28 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import ConflictResolution from "./pages/ConflictResolution";
-import FamilySupport from "./pages/FamilySupport";
-import ChildSupport from "./pages/ChildSupport";
+import DivorceSettlement from "./pages/DivorceSettlement";
+import MaintenanceAgreements from "./pages/MaintenanceAgreements";
+import ParentingPlans from "./pages/ParentingPlans";
+import VoiceOfChild from "./pages/VoiceOfChild";
+import AdultDivorcePrep from "./pages/AdultDivorcePrep";
+import IllnessDisability from "./pages/IllnessDisability";
+import PalliativeCare from "./pages/PalliativeCare";
+import HealthEducation from "./pages/HealthEducation";
 
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path={"/services/conflict-resolution"} component={ConflictResolution} />
-      <Route path={"/services/family-support"} component={FamilySupport} />
-      <Route path={"/services/child-support"} component={ChildSupport} />
+      <Route path={"/services/divorce-settlement"} component={DivorceSettlement} />
+      <Route path={"/services/maintenance-agreements"} component={MaintenanceAgreements} />
+      <Route path={"/services/parenting-plans"} component={ParentingPlans} />
+      <Route path={"/services/voice-of-child"} component={VoiceOfChild} />
+      <Route path={"/services/adult-divorce-preparation"} component={AdultDivorcePrep} />
+      <Route path={"/services/illness-disability"} component={IllnessDisability} />
+      <Route path={"/services/palliative-care"} component={PalliativeCare} />
+      <Route path={"/services/health-education"} component={HealthEducation} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
