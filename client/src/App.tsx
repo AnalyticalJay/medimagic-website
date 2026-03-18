@@ -13,7 +13,7 @@ import ChildSupport from "./pages/ChildSupport";
 function Router() {
   return (
     <Switch>
-      <Route path={"/ "} component={Home} />
+      <Route path={"/"} component={Home} />
       <Route path={"/services/conflict-resolution"} component={ConflictResolution} />
       <Route path={"/services/family-support"} component={FamilySupport} />
       <Route path={"/services/child-support"} component={ChildSupport} />
