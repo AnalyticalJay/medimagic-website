@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 /**
  * Design Philosophy: Humanist Wellness
@@ -125,62 +125,74 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Link href="/services/divorce-settlement">
-              <div className="group cursor-pointer p-6 bg-card border border-border rounded-lg hover:shadow-lg transition-all duration-300">
-                <div className="text-sm font-semibold text-accent mb-3">MEDIATION</div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  Divorce Settlement Agreements
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  Structured mediation to help couples reach fair, legally sound divorce agreements with clarity and mutual understanding.
-                </p>
-                <Button variant="ghost" className="text-accent hover:text-accent/80 p-0">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-mediation-bg-Rr7Tj8gF8vSHxCBF4tBN3X.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300" />
+                <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                  <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Divorce Settlement Agreements
+                  </h3>
+                  <p className="text-sm text-white/90 mb-4">
+                    Structured mediation to help couples reach fair, legally sound divorce agreements.
+                  </p>
+                  <Button className="cta-button w-fit">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
               </div>
             </Link>
 
             <Link href="/services/maintenance-agreements">
-              <div className="group cursor-pointer p-6 bg-card border border-border rounded-lg hover:shadow-lg transition-all duration-300">
-                <div className="text-sm font-semibold text-accent mb-3">MEDIATION</div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  Maintenance Agreements
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  Professional guidance for financial support arrangements that are equitable, sustainable, and fair to all parties involved.
-                </p>
-                <Button variant="ghost" className="text-accent hover:text-accent/80 p-0">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-mediation-bg-Rr7Tj8gF8vSHxCBF4tBN3X.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300" />
+                <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                  <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Maintenance Agreements
+                  </h3>
+                  <p className="text-sm text-white/90 mb-4">
+                    Professional guidance for equitable, sustainable financial support arrangements.
+                  </p>
+                  <Button className="cta-button w-fit">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
               </div>
             </Link>
 
             <Link href="/services/parenting-plans">
-              <div className="group cursor-pointer p-6 bg-card border border-border rounded-lg hover:shadow-lg transition-all duration-300">
-                <div className="text-sm font-semibold text-accent mb-3">MEDIATION</div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  Parenting Plans
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  Child-centred co-parenting frameworks that prioritise the wellbeing of children during and after separation.
-                </p>
-                <Button variant="ghost" className="text-accent hover:text-accent/80 p-0">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-mediation-bg-Rr7Tj8gF8vSHxCBF4tBN3X.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300" />
+                <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                  <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Parenting Plans
+                  </h3>
+                  <p className="text-sm text-white/90 mb-4">
+                    Child-centred co-parenting frameworks prioritising children's wellbeing.
+                  </p>
+                  <Button className="cta-button w-fit">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
               </div>
             </Link>
 
             <Link href="/services/voice-of-child">
-              <div className="group cursor-pointer p-6 bg-card border border-border rounded-lg hover:shadow-lg transition-all duration-300">
-                <div className="text-sm font-semibold text-accent mb-3">MEDIATION</div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  Voice of the Child
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  Professionally conducted interviews ensuring children's perspectives are heard and considered in mediation processes.
-                </p>
-                <Button variant="ghost" className="text-accent hover:text-accent/80 p-0">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-mediation-bg-Rr7Tj8gF8vSHxCBF4tBN3X.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300" />
+                <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                  <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Voice of the Child
+                  </h3>
+                  <p className="text-sm text-white/90 mb-4">
+                    Professional interviews ensuring children's perspectives are heard and considered.
+                  </p>
+                  <Button className="cta-button w-fit">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
               </div>
             </Link>
           </div>
@@ -205,62 +217,74 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Link href="/services/adult-divorce-preparation">
-              <div className="group cursor-pointer p-6 bg-background border border-border rounded-lg hover:shadow-lg transition-all duration-300">
-                <div className="text-sm font-semibold text-accent mb-3">SOCIAL WORK</div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  Adult Divorce Preparation
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  Emotional and practical support for individuals navigating the personal challenges of divorce and separation.
-                </p>
-                <Button variant="ghost" className="text-accent hover:text-accent/80 p-0">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-social-work-bg-fMTme8WD9bexc4EcN26UHu.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300" />
+                <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                  <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Adult Divorce Preparation
+                  </h3>
+                  <p className="text-sm text-white/90 mb-4">
+                    Emotional and practical support navigating the personal challenges of divorce.
+                  </p>
+                  <Button className="cta-button w-fit">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
               </div>
             </Link>
 
             <Link href="/services/illness-disability">
-              <div className="group cursor-pointer p-6 bg-background border border-border rounded-lg hover:shadow-lg transition-all duration-300">
-                <div className="text-sm font-semibold text-accent mb-3">SOCIAL WORK</div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  Illness & Disability Support
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  Compassionate guidance for individuals and families adjusting to the impact of illness or disability.
-                </p>
-                <Button variant="ghost" className="text-accent hover:text-accent/80 p-0">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-social-work-bg-fMTme8WD9bexc4EcN26UHu.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300" />
+                <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                  <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Illness & Disability Support
+                  </h3>
+                  <p className="text-sm text-white/90 mb-4">
+                    Compassionate guidance for individuals and families adjusting to illness or disability.
+                  </p>
+                  <Button className="cta-button w-fit">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
               </div>
             </Link>
 
             <Link href="/services/palliative-care">
-              <div className="group cursor-pointer p-6 bg-background border border-border rounded-lg hover:shadow-lg transition-all duration-300">
-                <div className="text-sm font-semibold text-accent mb-3">SOCIAL WORK</div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  Palliative & End-of-Life Care
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  Sensitive support for families navigating end-of-life transitions, communication, and grief.
-                </p>
-                <Button variant="ghost" className="text-accent hover:text-accent/80 p-0">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-social-work-bg-fMTme8WD9bexc4EcN26UHu.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300" />
+                <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                  <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Palliative & End-of-Life Care
+                  </h3>
+                  <p className="text-sm text-white/90 mb-4">
+                    Sensitive support for families navigating end-of-life transitions and grief.
+                  </p>
+                  <Button className="cta-button w-fit">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
               </div>
             </Link>
 
             <Link href="/services/health-education">
-              <div className="group cursor-pointer p-6 bg-background border border-border rounded-lg hover:shadow-lg transition-all duration-300">
-                <div className="text-sm font-semibold text-accent mb-3">SOCIAL WORK</div>
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  Health Education & Promotion
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  Educational support to promote health awareness, informed decision-making, and wellness.
-                </p>
-                <Button variant="ghost" className="text-accent hover:text-accent/80 p-0">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-social-work-bg-fMTme8WD9bexc4EcN26UHu.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-all duration-300" />
+                <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
+                  <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                    Health Education & Promotion
+                  </h3>
+                  <p className="text-sm text-white/90 mb-4">
+                    Educational support promoting health awareness and informed decision-making.
+                  </p>
+                  <Button className="cta-button w-fit">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
               </div>
             </Link>
           </div>
@@ -271,17 +295,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Section */}
-      <section id="how-it-works" className="py-16 md:py-24">
-        <div className="container max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+      {/* Why Choose MediMagic Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
             Why Choose MediMagic?
           </h2>
-          <p className="text-lg text-muted-foreground mb-12">
-            An Integrated Approach to Resolution and Support. Most mediation and support services operate in isolation, requiring individuals to navigate legal decisions and emotional challenges separately. This often leads to fragmented processes, increased stress, and prolonged conflict.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-12">
+            An Integrated Approach to Resolution and Support
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-foreground">Integrated Services</h3>
               <p className="text-muted-foreground">
@@ -307,90 +331,82 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="bg-card p-8 rounded-lg border border-border">
-            <h3 className="text-2xl font-bold text-foreground mb-6">Professional Standards You Can Trust</h3>
+      {/* Professional Standards Section */}
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+            Professional Standards You Can Trust
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
-              <div className="flex gap-4">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-foreground mb-1">Ethical & Neutral Practice</h4>
-                  <p className="text-muted-foreground">All services delivered with strict impartiality, clear professional boundaries, and informed consent.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-foreground mb-1">Confidential & Secure Care</h4>
-                  <p className="text-muted-foreground">Client information handled with discretion and confidentiality at all stages, creating a secure environment.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-foreground mb-1">Child-Centred Decision Making</h4>
-                  <p className="text-muted-foreground">Where children are involved, their wellbeing remains central, guided by ethical responsibility and care.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-foreground mb-1">Professionally Regulated Practice</h4>
-                  <p className="text-muted-foreground">Services provided in line with recognised professional standards, ensuring accountability and integrity.</p>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-foreground">Ethical & Neutral Practice</h3>
+              <p className="text-muted-foreground">
+                All services delivered with strict impartiality, clear professional boundaries, and informed consent to ensure fair, balanced, and responsible processes.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-foreground">Confidential & Secure Care</h3>
+              <p className="text-muted-foreground">
+                Client information handled with discretion and confidentiality at all stages, creating a secure environment that supports open communication.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-foreground">Child-Centred Decision Making</h3>
+              <p className="text-muted-foreground">
+                Where children are involved, their wellbeing remains central, guided by ethical responsibility, care, and long-term developmental considerations.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-foreground">Professionally Regulated Practice</h3>
+              <p className="text-muted-foreground">
+                Services provided in line with recognised professional standards and ethical codes, ensuring accountability, integrity, and consistent conduct.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-24 bg-card">
-        <div className="container grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              About Cornelia Griessel
-            </h2>
-            <p className="text-lg text-muted-foreground mb-4">
-              Cornelia Griessel is a dually trained and registered social worker and family mediator with extensive experience in medical social work, family mediation, and child-centred practice.
-            </p>
-            <p className="text-lg text-muted-foreground mb-4">
-              Her professional background includes over two decades of service within a multidisciplinary healthcare environment, as well as the founding and long-term management of a registered childcare non-profit organisation.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              Cornelia's work is guided by neutrality, clarity, and a strong commitment to protecting the wellbeing of vulnerable individuals — particularly children — while facilitating fair and responsible outcomes.
-            </p>
-            <div className="mt-8 space-y-3">
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-accent" />
-                <span className="font-semibold text-foreground">FAMAC Accredited Mediator</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-accent" />
-                <span className="font-semibold text-foreground">SASW Registered Social Worker</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-accent" />
-                <span className="font-semibold text-foreground">20+ Years Experience</span>
-              </div>
+      <section id="about" className="py-16 md:py-24 bg-background">
+        <div className="container max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            About Cornelia Griessel
+          </h2>
+          <p className="text-lg text-muted-foreground mb-4">
+            Cornelia Griessel is a dually trained and registered social worker and family mediator with extensive experience in medical social work, family mediation, and child-centred practice.
+          </p>
+          <p className="text-lg text-muted-foreground mb-4">
+            Her professional background includes over two decades of service within a multidisciplinary healthcare environment, as well as the founding and long-term management of a registered childcare non-profit organisation.
+          </p>
+          <p className="text-lg text-muted-foreground">
+            Cornelia's work is guided by neutrality, clarity, and a strong commitment to protecting the wellbeing of vulnerable individuals — particularly children — while facilitating fair and responsible outcomes.
+          </p>
+
+          <div className="flex gap-6 mt-8 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-accent" />
+              <span>FAMAC Accredited Mediator</span>
             </div>
-          </div>
-          <div className="hidden md:block">
-            <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop" 
-                alt="Cornelia Griessel"
-                className="w-full h-full object-cover"
-              />
+            <div className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-accent" />
+              <span>SASW Registered Social Worker</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-accent" />
+              <span>20+ Years Experience</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 hero-gradient">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-primary via-teal-600 to-teal-500 text-white">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Move Forward?
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
@@ -407,37 +423,38 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">MediMagic</h3>
-              <p className="text-sm opacity-80">Professional mediation and social work services for complex life transitions.</p>
-            </div>
-            <div>
               <h4 className="font-bold mb-4">Navigation</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="opacity-80 hover:opacity-100">Home</a></li>
-                <li><a href="#about" className="opacity-80 hover:opacity-100">About</a></li>
-                <li><a href="#services" className="opacity-80 hover:opacity-100">Services</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Contact</a></li>
+                <li><a href="/" className="hover:text-accent transition-colors">Home</a></li>
+                <li><a href="#about" className="hover:text-accent transition-colors">About</a></li>
+                <li><a href="#services" className="hover:text-accent transition-colors">Services</a></li>
+                <li><a href="#contact" className="hover:text-accent transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Services</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="opacity-80 hover:opacity-100">Mediation Services</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Social Work Services</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">About Cornelia</a></li>
+                <li><a href="/services/divorce-settlement" className="hover:text-accent transition-colors">Mediation Services</a></li>
+                <li><a href="/services/adult-divorce-preparation" className="hover:text-accent transition-colors">Social Work Services</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4">About</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#about" className="hover:text-accent transition-colors">About Cornelia</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="tel:0640603592" className="opacity-80 hover:opacity-100">064 060 3592</a></li>
-                <li><a href="mailto:CorneliaGriessel@MediMagic.co.za" className="opacity-80 hover:opacity-100">CorneliaGriessel@MediMagic.co.za</a></li>
-                <li><a href="https://medimagic.co.za" className="opacity-80 hover:opacity-100">medimagic.co.za</a></li>
+                <li><a href="tel:0640603592" className="hover:text-accent transition-colors">064 060 3592</a></li>
+                <li><a href="mailto:CorneliaGriessel@MediMagic.co.za" className="hover:text-accent transition-colors">CorneliaGriessel@MediMagic.co.za</a></li>
+                <li><a href="https://medimagic.co.za" className="hover:text-accent transition-colors">medimagic.co.za</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-background/20 pt-8 text-center text-sm opacity-80">
-            <p>© 2026 MediMagic. All rights reserved. Powered by Manus.</p>
+          <div className="border-t border-background/20 pt-8 text-sm text-center">
+            <p>&copy; 2026 MediMagic. All rights reserved.</p>
           </div>
         </div>
       </footer>
