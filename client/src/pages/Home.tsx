@@ -620,10 +620,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-pattern-lines">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      {/* CTA Section - Ready to Move Forward */}
+      <section className="py-16 md:py-24 relative overflow-hidden" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/cta-background-get-started-5qiKx5BMkiWBm6x7KohdTj.webp)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="container text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Ready to Move Forward?
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
@@ -671,11 +672,14 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">Still have questions?</p>
-            <button className="cta-button inline-flex items-center">
-              Contact Us <ArrowRight className="ml-2 w-4 h-4" />
-            </button>
+          <div className="text-center mt-12 p-8 rounded-lg" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/cta-background-consultation-Luc6yms9wcZAcXsWrkam34.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
+            <div className="absolute inset-0 bg-black/40 rounded-lg" />
+            <div className="relative z-10">
+              <p className="text-white/90 mb-4 font-semibold text-lg">Still have questions?</p>
+              <button className="cta-button inline-flex items-center">
+                Contact Us <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
       </section>
