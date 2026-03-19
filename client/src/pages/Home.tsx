@@ -438,7 +438,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-integrated-services-7MJ9nFiBj8WkiR85RWT48a.webp" alt="Integrated Services" className="w-8 h-8 object-contain" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/why-choose-icon-integrated-services-3d-UgfPiUGbMwxf3wrehLrdVr.webp" alt="Integrated Services" className="w-10 h-10 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Integrated Services</h3>
               </div>
               <p className="text-muted-foreground">
@@ -447,7 +447,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-child-centered-3MD5DxB3bzFXng7RuKdtPp.webp" alt="Child-Centred Practice" className="w-8 h-8 object-contain" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/why-choose-icon-child-centered-3d-cruvCSG7sJCHTMYjanmDC4.webp" alt="Child-Centred Practice" className="w-10 h-10 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Child-Centred Practice</h3>
               </div>
               <p className="text-muted-foreground">
@@ -456,7 +456,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-reduced-conflict-FLeaR3E4B95wqNDex6F3jq.webp" alt="Reduced Conflict" className="w-8 h-8 object-contain" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/why-choose-icon-reduced-conflict-3d-jkQvC6KymvBMR5TuM2Gvir.webp" alt="Reduced Conflict" className="w-10 h-10 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Reduced Conflict</h3>
               </div>
               <p className="text-muted-foreground">
@@ -465,7 +465,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-professional-regulated-jk5v2UPzNQoAC59n7aN3sN.webp" alt="Professional Standards" className="w-8 h-8 object-contain" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/why-choose-icon-professional-standards-3d-cZzz7gmx95wLfun3ciwbjF.webp" alt="Professional Standards" className="w-10 h-10 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Professional Standards</h3>
               </div>
               <p className="text-muted-foreground">
@@ -486,7 +486,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-ethical-neutral-Q4PWYT2qhouqhSx4gHrCeV.webp" alt="Ethical & Neutral Practice" className="w-8 h-8 object-contain" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/professional-standards-icon-ethical-neutral-3d-4k6b3hrjoG2CRxxD4DEXLA.webp" alt="Ethical & Neutral Practice" className="w-10 h-10 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Ethical & Neutral Practice</h3>
               </div>
               <p className="text-muted-foreground">
@@ -495,7 +495,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-confidential-secure-mz2ymyDULQwhs488SrGVPv.webp" alt="Confidential & Secure Care" className="w-8 h-8 object-contain" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/professional-standards-icon-confidential-secure-3d-iVfGL5uWDBE6M3Mjw4vMcE.webp" alt="Confidential & Secure Care" className="w-10 h-10 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Confidential & Secure Care</h3>
               </div>
               <p className="text-muted-foreground">
@@ -504,7 +504,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-child-wellbeing-LQiFHHwYHDEdsrbcNGRFAj.webp" alt="Child-Centred Decision Making" className="w-8 h-8 object-contain" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/professional-standards-icon-child-centered-3d-XEs8WrJfS5mVY6U2DVAQgo.webp" alt="Child-Centred Decision Making" className="w-10 h-10 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Child-Centred Decision Making</h3>
               </div>
               <p className="text-muted-foreground">
@@ -513,7 +513,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-professional-regulated-jk5v2UPzNQoAC59n7aN3sN.webp" alt="Professionally Regulated Practice" className="w-8 h-8 object-contain" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/professional-standards-icon-professionally-regulated-3d-JZze7vPNwnZjHx7XmmiARf.webp" alt="Professionally Regulated Practice" className="w-10 h-10 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Professionally Regulated Practice</h3>
               </div>
               <p className="text-muted-foreground">
