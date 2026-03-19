@@ -1,27 +1,27 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
-import { ArrowLeft, Check } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { ArrowLeft, Check, Heart, Users, Lightbulb } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function PalliativeCare() {
+  const [, navigate] = useLocation();
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between h-16">
-          <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">M</span>
-              </div>
-              <span className="font-bold text-lg text-foreground">MediMagic</span>
-            </div>
-          </Link>
-          <Link href="/">
-            <Button variant="ghost" size="sm" className="cursor-pointer">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Button>
-          </Link>
+          <button onClick={() => navigate("/")} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/medimagic_logo_e9a0b25b.webp" 
+              alt="MediMagic Logo"
+              className="h-8 w-auto"
+            />
+          </button>
+          <Button variant="ghost" size="sm" onClick={() => navigate("/")}>
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
+          </Button>
         </div>
       </nav>
 
@@ -37,214 +37,212 @@ export default function PalliativeCare() {
               Palliative & End-of-Life Care
             </h1>
             <p className="text-xl text-white/90">
-              Sensitive support for families navigating end-of-life transitions, communication, and grief.
+              Dignified, compassionate support for individuals and families during life's final chapter.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Main Content - Two Column Layout */}
       <section className="py-16 md:py-24">
-        <div className="container max-w-4xl">
-          <div className="prose prose-invert max-w-none">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Supporting You Through End-of-Life Transitions</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              End-of-life transitions are among the most profound and challenging experiences families face. Whether caring for a loved one with a terminal diagnosis or grieving the loss of someone close, these transitions bring complex emotional, spiritual, practical, and relational challenges. At MediMagic, our palliative and end-of-life care services provide compassionate, professional support to help families navigate this sacred time with dignity, love, and peace.
-            </p>
+        <div className="container max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Supporting Dignity in Life's Final Chapter</h2>
+                <p className="text-lg text-muted-foreground">
+                  Facing a terminal diagnosis or end-of-life journey is profoundly challenging—not just medically, but emotionally, spiritually, and relationally. At MediMagic, our Palliative & End-of-Life Care service provides compassionate support to help individuals and families navigate this sacred time with dignity, peace, and meaningful connection.
+                </p>
+              </div>
 
-            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/palliative-care-content-kMKPDW7XnLk7CZZp3hyUZV.webp" alt="Peaceful family gathering with dignity and compassion" className="w-full h-auto" />
-            </div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">What Is Palliative & End-of-Life Care Support?</h3>
+                <p className="text-muted-foreground mb-4">
+                  Palliative & End-of-Life Care Support is professional social work guidance focused on quality of life, comfort, meaning-making, and family support during terminal illness or end-of-life transitions. We help individuals and families navigate medical decisions, emotional challenges, spiritual questions, and legacy planning.
+                </p>
+                <p className="text-muted-foreground">
+                  This service honors the dignity and autonomy of the individual while supporting families through one of life's most profound experiences.
+                </p>
+              </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is Palliative & End-of-Life Care Support?</h3>
-            <p className="text-muted-foreground mb-6">
-              Palliative and end-of-life care support is professional social work guidance designed to help individuals and families navigate the physical, emotional, spiritual, and practical dimensions of end-of-life transitions. It combines emotional support, practical guidance, communication facilitation, and grief support to help families move through this transition with compassion and peace.
-            </p>
-
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Areas of Support</h3>
-            <div className="grid md:grid-cols-2 gap-6 my-8">
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Emotional Support</h4>
-                <p className="text-muted-foreground text-sm">Safe space to process fear, grief, anger, and other emotions related to end-of-life.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Family Communication</h4>
-                <p className="text-muted-foreground text-sm">Guidance on difficult conversations and helping family members communicate with each other.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Spiritual Support</h4>
-                <p className="text-muted-foreground text-sm">Support with spiritual or existential questions and connection to spiritual resources.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Practical Planning</h4>
-                <p className="text-muted-foreground text-sm">Guidance on medical decisions, advance directives, and end-of-life planning.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Grief Support</h4>
-                <p className="text-muted-foreground text-sm">Support processing grief and building resilience after loss.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Caregiver Support</h4>
-                <p className="text-muted-foreground text-sm">Support for those caring for dying loved ones, managing emotional and practical demands.</p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Who Can Benefit?</h3>
-            <p className="text-muted-foreground mb-6">
-              Palliative and end-of-life care support is valuable for:
-            </p>
-            <ul className="space-y-2 text-muted-foreground mb-8">
-              <li className="flex gap-3"><span className="text-accent">•</span> Individuals with terminal diagnoses and their families</li>
-              <li className="flex gap-3"><span className="text-accent">•</span> Family members caring for dying loved ones</li>
-              <li className="flex gap-3"><span className="text-accent">•</span> Those grieving the loss of a loved one</li>
-              <li className="flex gap-3"><span className="text-accent">•</span> Families navigating complex end-of-life decisions</li>
-              <li className="flex gap-3"><span className="text-accent">•</span> Those seeking spiritual or existential support during end-of-life</li>
-            </ul>
-
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">The Support Process</h3>
-            <div className="space-y-6 my-8">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    1
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Areas We Support</h3>
+                <div className="space-y-3">
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Emotional & Spiritual Support</h4>
+                      <p className="text-sm text-muted-foreground">Processing fear, grief, meaning-making, and spiritual questions during end-of-life.</p>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Initial Assessment</h4>
-                  <p className="text-muted-foreground">Understanding your situation, concerns, and support needs during this transition.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    2
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Medical Decision-Making</h4>
+                      <p className="text-sm text-muted-foreground">Support navigating treatment options, advance directives, and end-of-life preferences.</p>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Emotional & Spiritual Support</h4>
-                  <p className="text-muted-foreground">Safe space to process emotions and explore spiritual or existential dimensions of end-of-life.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    3
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Family Communication</h4>
+                      <p className="text-sm text-muted-foreground">Facilitating honest, loving conversations between patients and family members.</p>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Communication Facilitation</h4>
-                  <p className="text-muted-foreground">Support with difficult conversations and helping family members communicate with each other.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    4
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Legacy & Meaning-Making</h4>
+                      <p className="text-sm text-muted-foreground">Creating opportunities for legacy, closure, and meaningful final connections.</p>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Practical Guidance</h4>
-                  <p className="text-muted-foreground">Support with medical decisions, advance directives, and end-of-life planning.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    5
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Ongoing Grief Support</h4>
-                  <p className="text-muted-foreground">Continued support after loss, helping families process grief and rebuild.</p>
                 </div>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Benefits of Palliative & End-of-Life Care Support</h3>
-            <div className="space-y-3 my-8">
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Emotional Resilience:</strong> Develop healthy coping strategies and emotional resilience.</span>
+            {/* Right Column - Image and CTA */}
+            <div className="space-y-8">
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/palliative-care-content-kMKPDW7XnLk7CZZp3hyUZV.webp" 
+                  alt="Peaceful family gathering and dignified end-of-life care" 
+                  className="w-full h-auto"
+                />
               </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Spiritual Peace:</strong> Explore spiritual dimensions and find peace during end-of-life.</span>
+
+              <Card className="p-8 bg-accent/5 border border-accent/20">
+                <h3 className="text-xl font-bold text-foreground mb-4">Our Compassionate Philosophy</h3>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Dignity-centered:</strong> Honoring individual autonomy and values</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Family-focused:</strong> Supporting loved ones through this journey</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Holistic:</strong> Addressing physical, emotional, and spiritual needs</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Peaceful:</strong> Creating comfort and meaningful connection</span>
+                  </li>
+                </ul>
+              </Card>
+
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 text-lg"
+                onClick={() => navigate("/booking")}
+              >
+                Book a Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Support Process */}
+      <section className="py-16 md:py-24 bg-accent/5">
+        <div className="container max-w-6xl">
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Your End-of-Life Support Journey</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  1
+                </div>
               </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Family Connection:</strong> Strengthen family relationships and communication during this sacred time.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Practical Support:</strong> Navigate medical and practical decisions with professional guidance.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Grief Processing:</strong> Support processing grief and rebuilding after loss.</span>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Compassionate Assessment</h3>
+                <p className="text-muted-foreground">Understanding your situation, wishes, and support needs with sensitivity and respect.</p>
               </div>
             </div>
 
-            <div className="bg-card border border-border p-8 rounded-lg my-12">
-              <h3 className="text-xl font-bold text-foreground mb-4">Confidential & Compassionate</h3>
-              <p className="text-muted-foreground">
-                All palliative and end-of-life care support is provided in a confidential, deeply compassionate environment. Your experiences, feelings, and spiritual beliefs are respected and honoured. Support is tailored to your unique needs, values, and circumstances.
-              </p>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Emotional & Spiritual Support</h3>
+                <p className="text-muted-foreground">Processing emotions, spiritual questions, and finding peace and meaning.</p>
+              </div>
             </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Family Facilitation</h3>
+                <p className="text-muted-foreground">Facilitating meaningful conversations and connections between patient and family.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Ongoing Presence</h3>
+                <p className="text-muted-foreground">Continuous support through the end-of-life journey and beyond for grieving families.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 md:py-24">
+        <div className="container max-w-6xl">
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Benefits of Palliative & End-of-Life Support</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8">
+              <Heart className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Peaceful Transition</h3>
+              <p className="text-muted-foreground">Navigate end-of-life with dignity, comfort, and emotional support in a safe environment.</p>
+            </Card>
+
+            <Card className="p-8">
+              <Lightbulb className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Meaningful Connection</h3>
+              <p className="text-muted-foreground">Create lasting memories and meaningful moments with loved ones during this sacred time.</p>
+            </Card>
+
+            <Card className="p-8">
+              <Users className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Family Support</h3>
+              <p className="text-muted-foreground">Help families navigate grief, communicate openly, and find peace and closure.</p>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-primary/80">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready for Support?
-          </h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Schedule a consultation to discuss how palliative and end-of-life care support can help you and your family navigate this transition with peace and dignity.
+      <section className="py-16 md:py-24 bg-gradient-to-r from-accent/10 via-teal-500/5 to-accent/10">
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-3xl font-bold text-foreground mb-6">Ready to Navigate This Journey with Compassionate Support?</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Let us help you and your family find peace, dignity, and meaningful connection. Book a consultation with Cornelia today.
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            Schedule Consultation
+          <Button 
+            className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg"
+            onClick={() => navigate("/booking")}
+          >
+            Book Your Consultation Now
           </Button>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="font-bold text-lg mb-4">MediMagic</h3>
-              <p className="text-sm opacity-80">Professional mediation and social work services for complex life transitions.</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Services</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/"><a className="opacity-80 hover:opacity-100">Home</a></Link></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Mediation Services</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Social Work Services</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="tel:0640603592" className="opacity-80 hover:opacity-100">064 060 3592</a></li>
-                <li><a href="mailto:CorneliaGriessel@MediMagic.co.za" className="opacity-80 hover:opacity-100">CorneliaGriessel@MediMagic.co.za</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="opacity-80 hover:opacity-100">Privacy Policy</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Terms & Conditions</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-background/20 pt-8 text-center text-sm opacity-80">
-            <p>© 2026 MediMagic. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
