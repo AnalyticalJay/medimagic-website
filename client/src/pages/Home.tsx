@@ -419,6 +419,69 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Online Consultation Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-teal-500/10">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="inline-block px-3 py-1 bg-accent/20 rounded-full text-sm font-semibold text-accent">
+                Accessible Support
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Online Consultations Available Nationwide
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                MediMagic extends professional mediation and social work services beyond Port Elizabeth. Whether you're in another province or prefer the convenience of remote sessions, our online consultation services bring expert support directly to your home.
+              </p>
+              <div className="space-y-4 pt-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center mt-1">
+                    <Check className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Secure & Confidential</h3>
+                    <p className="text-muted-foreground text-sm">All online sessions conducted through secure, encrypted platforms ensuring complete privacy and confidentiality.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center mt-1">
+                    <Check className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Flexible Scheduling</h3>
+                    <p className="text-muted-foreground text-sm">Book consultations at times that work for you, with flexible scheduling options to accommodate your lifestyle and commitments.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center mt-1">
+                    <Check className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Same Professional Quality</h3>
+                    <p className="text-muted-foreground text-sm">Receive the same level of expert, compassionate support whether you choose in-person or online sessions.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-6">
+                <button className="cta-button inline-flex items-center">
+                  Book Your Consultation <ArrowRight className="ml-2 w-4 h-4" />
+                </button>
+              </div>
+            </div>
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-teal-500/20" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-6xl mb-4">💻</div>
+                  <p className="text-foreground font-semibold text-lg">Professional Support, Anytime, Anywhere</p>
+                  <p className="text-muted-foreground mt-2">Secure online consultations available nationwide</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-16 md:py-24 bg-background">
         <div className="container max-w-3xl">
