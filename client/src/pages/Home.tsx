@@ -75,11 +75,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="hidden md:block relative h-96">
+          <div className="hidden md:flex items-center justify-center relative h-96">
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/hero-illustration-professional-AydpQEi9FycKExkxyADizk.webp" 
-              alt="Professional support figure"
-              className="w-full h-full object-contain object-right opacity-90"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/medimagic_logo_e9a0b25b.webp" 
+              alt="MediMagic Logo"
+              className="w-64 h-64 object-contain opacity-80 drop-shadow-lg"
             />
           </div>
         </div>
