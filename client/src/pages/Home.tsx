@@ -179,8 +179,7 @@ export default function Home() {
       </section>
 
       {/* Welcome Section */}
-      <section className="py-16 md:py-24 bg-card">
-        <div className="container max-w-3xl">
+      <section className="py-16 md:py-24 bg-pattern-mesh">   <div className="container max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Welcome to MediMagic
           </h2>
@@ -388,7 +387,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose MediMagic Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-pattern-shapes">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
             Why Choose MediMagic?
@@ -439,7 +438,7 @@ export default function Home() {
       </section>
 
       {/* Professional Standards Section */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-pattern-diagonal">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
             Professional Standards You Can Trust
@@ -486,8 +485,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Online Consultation Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary/10 to-teal-500/10">
+      {/* Online Consultations Section */}
+      <section className="py-16 md:py-24 bg-pattern-blobs">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -550,7 +549,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-pattern-gradient-subtle">
         <div className="container max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             About Cornelia Griessel
@@ -582,8 +581,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary via-teal-600 to-teal-500 text-white">
+      {/* FAQ Section */}
+      <section className="py-16 md:py-24 bg-pattern-lines">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Move Forward?
