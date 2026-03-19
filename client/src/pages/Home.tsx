@@ -150,16 +150,10 @@ export default function Home() {
             </div>
           </div>
           <div className="hidden md:flex items-center justify-center relative h-96">
-            <div className="absolute inset-0 flex items-center justify-center opacity-10">
-              <svg className="w-80 h-80 text-white" viewBox="0 0 200 200" fill="currentColor">
-                <path d="M100 20C55.8 20 20 55.8 20 100s35.8 80 80 80 80-35.8 80-80-35.8-80-80-80zm0 140c-33.1 0-60-26.9-60-60s26.9-60 60-60 60 26.9 60 60-26.9 60-60 60z"/>
-                <path d="M100 50c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 80c-16.6 0-30-13.4-30-30s13.4-30 30-30 30 13.4 30 30-13.4 30-30 30z"/>
-              </svg>
-            </div>
             <img 
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/HandStar_877534a4.webp" 
               alt="Hand Holding Star - Transformation"
-              className="w-full h-full object-contain drop-shadow-2xl relative z-10"
+              className="w-full h-full object-contain drop-shadow-2xl"
             />
           </div>
         </div>
