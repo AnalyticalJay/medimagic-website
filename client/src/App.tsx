@@ -17,6 +17,7 @@ import PalliativeCare from "./pages/PalliativeCare";
 import HealthEducation from "./pages/HealthEducation";
 import AdminDashboard from "./pages/AdminDashboard";
 import Contact from "./pages/Contact";
+import Showcase from "./pages/Showcase";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -35,6 +36,7 @@ function Router() {
       <Route path={"/services/health-education"} component={HealthEducation} />
       <Route path={"/admin/dashboard"} component={AdminDashboard} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/showcase"} component={Showcase} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

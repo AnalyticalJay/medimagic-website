@@ -157,3 +157,45 @@
 - [x] Added Social Work dropdown with 4 social work services
 - [x] All navigation links tested and working
 - [x] Mobile menu updated with new structure
+
+
+## Admin Setup Instructions
+
+### For Cornelia to Access Admin Dashboard:
+
+1. **First Login**: Visit the website and click "Get Started" to create an account using Manus OAuth
+2. **Admin Promotion**: After first login, the admin needs to update her user role to "admin" in the database
+3. **Access Dashboard**: Once promoted, visit `/admin/dashboard` to manage bookings and availability
+
+### Admin Dashboard Features:
+- View all bookings with client details (name, email, phone, service, date, time, status)
+- Filter bookings by:
+  - Service type (8 mediation and social work services)
+  - Booking status (pending, confirmed, completed, cancelled)
+  - Date range (start and end dates)
+- Update booking status inline with dropdown
+- Manage availability by toggling 8 time slots per day (9 AM - 5 PM)
+- Refresh booking list to see real-time updates
+
+### Database Admin Promotion:
+To make Cornelia an admin, update her user record in the database:
+```sql
+UPDATE users SET role = 'admin' WHERE id = <cornelia_user_id>;
+```
+
+Or use the Management UI → Database panel to update the role field directly.
+
+
+## Completed - Showcase Page
+
+- [x] Generated 5 professional showcase images
+- [x] Created comprehensive Showcase.tsx component
+- [x] Added showcase route to App.tsx
+- [x] Showcase page includes:
+  - [x] Hero section with feature overview
+  - [x] 6 key features grid with icons
+  - [x] Visual showcase section with all 5 images
+  - [x] Technical highlights (frontend, backend, testing)
+  - [x] Call-to-action section
+- [x] Responsive design and styling
+- [x] All images properly integrated with CDN URLs
