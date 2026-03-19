@@ -199,7 +199,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-confidential-safe-nnZqyuwm6CBammXLdkaDDe.webp" alt="Confidential & Safe" className="w-16 h-16 object-contain" />
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/welcome-icon-confidential-safe-3d-jinJuEKyMtJ24B5sf7ZCDS.webp" alt="Confidential & Safe" className="w-20 h-20 object-contain" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Confidential & Safe</h3>
@@ -209,7 +209,7 @@ export default function Home() {
               
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-emotionally-intelligent-HdECXubUKhs8PafWR9AQim.webp" alt="Emotionally Intelligent" className="w-16 h-16 object-contain" />
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/welcome-icon-emotionally-intelligent-3d-LmKWNytDhKrWHTFhJunABb.webp" alt="Emotionally Intelligent" className="w-20 h-20 object-contain" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Emotionally Intelligent</h3>
@@ -219,7 +219,7 @@ export default function Home() {
               
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-highly-qualified-PX6V2e2XJVNDyWt48GRaik.webp" alt="Highly Qualified" className="w-16 h-16 object-contain" />
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/welcome-icon-highly-qualified-3d-cfDWdp9FeNPPjZ5nzSRDmx.webp" alt="Highly Qualified" className="w-20 h-20 object-contain" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Highly Qualified</h3>
