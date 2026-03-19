@@ -118,15 +118,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/hero-background-blend-JZD7f87nMVdv9t2kUKzGtK.webp)',
-            backgroundBlendMode: 'overlay'
-          }}
-        />
-
+      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-r from-primary/10 to-teal-500/10">
         <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
