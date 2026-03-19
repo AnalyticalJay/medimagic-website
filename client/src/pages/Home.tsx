@@ -125,7 +125,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Link href="/services/divorce-settlement">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/wp_mediation_service_card_6141cf87.png)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/divorce-settleent_bec9bf43.png)'}}>
                 <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
