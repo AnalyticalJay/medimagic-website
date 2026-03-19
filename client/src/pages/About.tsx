@@ -89,8 +89,8 @@ export default function About() {
             <div className="md:col-span-1">
               <div className="sticky top-24">
                 <img 
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/cornelia-headshot-5tRS6Cw2LAbn3yQugwoTuy.webp"
-                  alt="Cornelia Griessel"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/CorneliaGrissel_58ab5064.png"
+                  alt="Cornelia Griessel - Professional Headshot"
                   className="rounded-lg shadow-lg w-full object-cover"
                 />
                 <div className="mt-6 p-6 bg-accent/10 rounded-lg border border-accent/20">
