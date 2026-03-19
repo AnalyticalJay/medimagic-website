@@ -1,6 +1,7 @@
 import { Link } from "wouter";
-import { ArrowRight, Check, Zap, Heart, Users, Shield, CheckCircle, Lock, Baby, Award } from "lucide-react";
+import { ArrowRight, Check, Zap, Heart, Users, Shield, CheckCircle, Lock, Baby, Award, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 /**
  * Design Philosophy: Humanist Wellness
@@ -11,6 +12,7 @@ import { Button } from "@/components/ui/button";
  */
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Navigation */}
@@ -22,7 +24,6 @@ export default function Home() {
               alt="MediMagic Logo"
               className="h-10 w-auto"
             />
-            <span className="font-bold text-lg text-foreground">MediMagic</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-foreground hover:text-accent transition-colors">Services</a>
@@ -32,7 +33,31 @@ export default function Home() {
               Get Started
             </Button>
           </div>
+          <button 
+            className="md:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6 text-foreground" />
+            ) : (
+              <Menu className="w-6 h-6 text-foreground" />
+            )}
+          </button>
         </div>
+        
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background border-t border-border">
+            <div className="container py-4 space-y-3">
+              <a href="#services" className="block text-foreground hover:text-accent transition-colors py-2">Services</a>
+              <a href="#how-it-works" className="block text-foreground hover:text-accent transition-colors py-2">How It Works</a>
+              <a href="#about" className="block text-foreground hover:text-accent transition-colors py-2">About</a>
+              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
