@@ -143,7 +143,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/maintenance-agreements">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/wp_mediation_service_card_6141cf87.png)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-maintenance-agreements-TPwMZyHS6VzvrPeVb4dHou.webp)'}}>
                 <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
@@ -161,7 +161,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/parenting-plans">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/wp_mediation_service_card_6141cf87.png)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-parenting-plans-bozoRCwkJVGrbwwDKQMBWW.webp)'}}>
                 <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
@@ -179,7 +179,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/voice-of-child">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/wp_mediation_service_card_6141cf87.png)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-voice-of-child-criaPyRhiAG8wVcxgdT2n3.webp)'}}>
                 <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
@@ -217,7 +217,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Link href="/services/adult-divorce-preparation">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/wp_social_work_service_card_4b94a0db.png)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-adult-divorce-prep-kofcyUYZ7Azw84FArwpe2v.webp)'}}>
                 <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
@@ -235,7 +235,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/illness-disability">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/wp_social_work_service_card_4b94a0db.png)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-illness-disability-AMcZmAXa5EVCTF36Rnqqjb.webp)'}}>
                 <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
@@ -253,7 +253,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/palliative-care">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/wp_social_work_service_card_4b94a0db.png)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-palliative-care-MiuzcpCjSHMshPCRUzCQgM.webp)'}}>
                 <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
@@ -271,7 +271,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/health-education">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/wp_social_work_service_card_4b94a0db.png)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-health-education-MfQZJQVeLaRzK5XXfAtdv9.webp)'}}>
                 <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
