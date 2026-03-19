@@ -199,9 +199,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-accent/20">
-                    <Shield className="w-6 h-6 text-accent" />
-                  </div>
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-confidential-safe-nnZqyuwm6CBammXLdkaDDe.webp" alt="Confidential & Safe" className="w-16 h-16 object-contain" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Confidential & Safe</h3>
@@ -211,9 +209,7 @@ export default function Home() {
               
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-accent/20">
-                    <Heart className="w-6 h-6 text-accent" />
-                  </div>
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-emotionally-intelligent-HdECXubUKhs8PafWR9AQim.webp" alt="Emotionally Intelligent" className="w-16 h-16 object-contain" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Emotionally Intelligent</h3>
@@ -223,9 +219,7 @@ export default function Home() {
               
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-accent/20">
-                    <Award className="w-6 h-6 text-accent" />
-                  </div>
+                  <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-highly-qualified-PX6V2e2XJVNDyWt48GRaik.webp" alt="Highly Qualified" className="w-16 h-16 object-contain" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Highly Qualified</h3>
@@ -444,7 +438,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <Zap className="w-6 h-6 text-accent" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-integrated-services-7MJ9nFiBj8WkiR85RWT48a.webp" alt="Integrated Services" className="w-8 h-8 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Integrated Services</h3>
               </div>
               <p className="text-muted-foreground">
@@ -453,7 +447,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <Heart className="w-6 h-6 text-accent" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-child-centered-3MD5DxB3bzFXng7RuKdtPp.webp" alt="Child-Centred Practice" className="w-8 h-8 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Child-Centred Practice</h3>
               </div>
               <p className="text-muted-foreground">
@@ -462,7 +456,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <Users className="w-6 h-6 text-accent" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-reduced-conflict-FLeaR3E4B95wqNDex6F3jq.webp" alt="Reduced Conflict" className="w-8 h-8 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Reduced Conflict</h3>
               </div>
               <p className="text-muted-foreground">
@@ -471,7 +465,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <Shield className="w-6 h-6 text-accent" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-professional-regulated-jk5v2UPzNQoAC59n7aN3sN.webp" alt="Professional Standards" className="w-8 h-8 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Professional Standards</h3>
               </div>
               <p className="text-muted-foreground">
@@ -492,7 +486,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <CheckCircle className="w-6 h-6 text-accent" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-ethical-neutral-Q4PWYT2qhouqhSx4gHrCeV.webp" alt="Ethical & Neutral Practice" className="w-8 h-8 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Ethical & Neutral Practice</h3>
               </div>
               <p className="text-muted-foreground">
@@ -501,7 +495,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <Lock className="w-6 h-6 text-accent" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-confidential-secure-mz2ymyDULQwhs488SrGVPv.webp" alt="Confidential & Secure Care" className="w-8 h-8 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Confidential & Secure Care</h3>
               </div>
               <p className="text-muted-foreground">
@@ -510,7 +504,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <Baby className="w-6 h-6 text-accent" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-child-wellbeing-LQiFHHwYHDEdsrbcNGRFAj.webp" alt="Child-Centred Decision Making" className="w-8 h-8 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Child-Centred Decision Making</h3>
               </div>
               <p className="text-muted-foreground">
@@ -519,7 +513,7 @@ export default function Home() {
             </div>
             <div className="space-y-4 flex flex-col">
               <div className="flex items-center gap-3 mb-2">
-                <Award className="w-6 h-6 text-accent" />
+                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/icon-professional-regulated-jk5v2UPzNQoAC59n7aN3sN.webp" alt="Professionally Regulated Practice" className="w-8 h-8 object-contain" />
                 <h3 className="text-xl font-bold text-foreground">Professionally Regulated Practice</h3>
               </div>
               <p className="text-muted-foreground">
