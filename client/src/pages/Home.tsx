@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Zap, Heart, Users, Shield, CheckCircle, Lock, Baby, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 /**
@@ -126,7 +126,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Link href="/services/divorce-settlement">
               <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/divorce-settleent_bec9bf43.png)'}}>
-                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
@@ -143,8 +143,8 @@ export default function Home() {
             </Link>
 
             <Link href="/services/maintenance-agreements">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-maintenance-agreements-TPwMZyHS6VzvrPeVb4dHou.webp)'}}>
-                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-maintenance-agreements-enhanced-GP4fajaBjfTswGmGk9NF9u.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
@@ -161,8 +161,8 @@ export default function Home() {
             </Link>
 
             <Link href="/services/parenting-plans">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-parenting-plans-bozoRCwkJVGrbwwDKQMBWW.webp)'}}>
-                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-parenting-plans-enhanced-KGyGM288VnyxiWUoaXvx2t.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
@@ -179,8 +179,8 @@ export default function Home() {
             </Link>
 
             <Link href="/services/voice-of-child">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-voice-of-child-criaPyRhiAG8wVcxgdT2n3.webp)'}}>
-                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-voice-of-child-enhanced-KrtpgWcRxYwxWYrDh7Bqvm.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
@@ -217,8 +217,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Link href="/services/adult-divorce-preparation">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-adult-divorce-prep-kofcyUYZ7Azw84FArwpe2v.webp)'}}>
-                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-adult-divorce-prep-enhanced-ZMz3YUqdcobQnhPmuR29u8.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
@@ -235,8 +235,8 @@ export default function Home() {
             </Link>
 
             <Link href="/services/illness-disability">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-illness-disability-AMcZmAXa5EVCTF36Rnqqjb.webp)'}}>
-                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-illness-disability-enhanced-646usUkxDq5RoMZZmGLDGy.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
@@ -253,8 +253,8 @@ export default function Home() {
             </Link>
 
             <Link href="/services/palliative-care">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-palliative-care-MiuzcpCjSHMshPCRUzCQgM.webp)'}}>
-                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-palliative-care-enhanced-AMNzGPWyGeFNBHQ5t9qsJH.webp)'}}>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
@@ -272,7 +272,7 @@ export default function Home() {
 
             <Link href="/services/health-education">
               <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-health-education-MfQZJQVeLaRzK5XXfAtdv9.webp)'}}>
-                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/25 transition-all duration-300" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">SOCIAL WORK</div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">
@@ -306,26 +306,38 @@ export default function Home() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-foreground">Integrated Services</h3>
+            <div className="space-y-4 flex flex-col">
+              <div className="flex items-center gap-3 mb-2">
+                <Zap className="w-6 h-6 text-accent" />
+                <h3 className="text-xl font-bold text-foreground">Integrated Services</h3>
+              </div>
               <p className="text-muted-foreground">
                 By integrating family law mediation with professional social work, we provide coordinated, structured support that addresses both decision-making and emotional stability in one process.
               </p>
             </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-foreground">Child-Centred Practice</h3>
+            <div className="space-y-4 flex flex-col">
+              <div className="flex items-center gap-3 mb-2">
+                <Heart className="w-6 h-6 text-accent" />
+                <h3 className="text-xl font-bold text-foreground">Child-Centred Practice</h3>
+              </div>
               <p className="text-muted-foreground">
                 Where children are involved, their wellbeing and best interests remain central to every process, guided by ethical responsibility and care.
               </p>
             </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-foreground">Reduced Conflict</h3>
+            <div className="space-y-4 flex flex-col">
+              <div className="flex items-center gap-3 mb-2">
+                <Users className="w-6 h-6 text-accent" />
+                <h3 className="text-xl font-bold text-foreground">Reduced Conflict</h3>
+              </div>
               <p className="text-muted-foreground">
                 One trusted professional guiding your journey eliminates duplicated processes and reduces overall stress and conflict.
               </p>
             </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-foreground">Professional Standards</h3>
+            <div className="space-y-4 flex flex-col">
+              <div className="flex items-center gap-3 mb-2">
+                <Shield className="w-6 h-6 text-accent" />
+                <h3 className="text-xl font-bold text-foreground">Professional Standards</h3>
+              </div>
               <p className="text-muted-foreground">
                 All services delivered with strict impartiality, confidentiality, and adherence to professional ethical codes and regulations.
               </p>
@@ -342,26 +354,38 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-foreground">Ethical & Neutral Practice</h3>
+            <div className="space-y-4 flex flex-col">
+              <div className="flex items-center gap-3 mb-2">
+                <CheckCircle className="w-6 h-6 text-accent" />
+                <h3 className="text-xl font-bold text-foreground">Ethical & Neutral Practice</h3>
+              </div>
               <p className="text-muted-foreground">
                 All services delivered with strict impartiality, clear professional boundaries, and informed consent to ensure fair, balanced, and responsible processes.
               </p>
             </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-foreground">Confidential & Secure Care</h3>
+            <div className="space-y-4 flex flex-col">
+              <div className="flex items-center gap-3 mb-2">
+                <Lock className="w-6 h-6 text-accent" />
+                <h3 className="text-xl font-bold text-foreground">Confidential & Secure Care</h3>
+              </div>
               <p className="text-muted-foreground">
                 Client information handled with discretion and confidentiality at all stages, creating a secure environment that supports open communication.
               </p>
             </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-foreground">Child-Centred Decision Making</h3>
+            <div className="space-y-4 flex flex-col">
+              <div className="flex items-center gap-3 mb-2">
+                <Baby className="w-6 h-6 text-accent" />
+                <h3 className="text-xl font-bold text-foreground">Child-Centred Decision Making</h3>
+              </div>
               <p className="text-muted-foreground">
                 Where children are involved, their wellbeing remains central, guided by ethical responsibility, care, and long-term developmental considerations.
               </p>
             </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-foreground">Professionally Regulated Practice</h3>
+            <div className="space-y-4 flex flex-col">
+              <div className="flex items-center gap-3 mb-2">
+                <Award className="w-6 h-6 text-accent" />
+                <h3 className="text-xl font-bold text-foreground">Professionally Regulated Practice</h3>
+              </div>
               <p className="text-muted-foreground">
                 Services provided in line with recognised professional standards and ethical codes, ensuring accountability, integrity, and consistent conduct.
               </p>
