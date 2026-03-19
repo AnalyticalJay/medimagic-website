@@ -199,3 +199,18 @@ Or use the Management UI → Database panel to update the role field directly.
   - [x] Call-to-action section
 - [x] Responsive design and styling
 - [x] All images properly integrated with CDN URLs
+
+
+## In Progress - Service Pages Restructuring
+
+- [ ] Restructure DivorceSettlement.tsx with two-column layout
+- [ ] Restructure MaintenanceAgreements.tsx with two-column layout
+- [ ] Restructure ParentingPlans.tsx with two-column layout
+- [ ] Restructure VoiceOfChild.tsx with two-column layout
+- [ ] Restructure AdultDivorcePrep.tsx with two-column layout
+- [ ] Restructure IllnessDisability.tsx with two-column layout
+- [ ] Restructure PalliativeCare.tsx with two-column layout
+- [ ] Restructure HealthEducation.tsx with two-column layout
+- [ ] Add comprehensive content to all 8 service pages
+- [ ] Add "Book a Consultation" CTA buttons to all pages
+- [ ] Test all service pages for layout and responsiveness

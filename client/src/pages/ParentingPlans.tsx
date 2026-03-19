@@ -1,32 +1,32 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
-import { ArrowLeft, Check } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { ArrowLeft, Check, Heart, Users, Calendar } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function ParentingPlans() {
+  const [, navigate] = useLocation();
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between h-16">
-          <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">M</span>
-              </div>
-              <span className="font-bold text-lg text-foreground">MediMagic</span>
-            </div>
-          </Link>
-          <Link href="/">
-            <Button variant="ghost" size="sm" className="cursor-pointer">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Button>
-          </Link>
+          <button onClick={() => navigate("/")} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/medimagic_logo_e9a0b25b.webp" 
+              alt="MediMagic Logo"
+              className="h-8 w-auto"
+            />
+          </button>
+          <Button variant="ghost" size="sm" onClick={() => navigate("/")}>
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
+          </Button>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/parenting-plans-hero-cttnn4p5JN9Gys5Lbzh8nz.webp)'}}>
+      <section className="relative py-16 md:py-24 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/parenting-plans-hero-8Qjz9KPqEQfYNvWjXNXX.webp)'}}>
         <div className="absolute inset-0 bg-black/40" />
         <div className="container relative z-10">
           <div className="max-w-3xl">
@@ -37,233 +37,212 @@ export default function ParentingPlans() {
               Parenting Plans
             </h1>
             <p className="text-xl text-white/90">
-              Child-centred co-parenting frameworks that prioritise the wellbeing of children during and after separation.
+              Child-centred mediation to create parenting arrangements that prioritize children's wellbeing and stability.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Main Content - Two Column Layout */}
       <section className="py-16 md:py-24">
-        <div className="container max-w-4xl">
-          <div className="prose prose-invert max-w-none">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Creating Child-Centred Parenting Plans</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              When parents separate or divorce, one of the most important decisions is how to ensure children's wellbeing and maintain meaningful relationships with both parents. At MediMagic, we help parents develop comprehensive parenting plans that prioritise children's needs, stability, and emotional security while allowing both parents to remain actively involved in their children's lives.
-            </p>
+        <div className="container max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Creating Child-Centred Parenting Plans</h2>
+                <p className="text-lg text-muted-foreground">
+                  When parents separate or divorce, one of the most important decisions is determining parenting arrangements. At MediMagic, we facilitate mediation to help parents create comprehensive parenting plans that prioritize children's wellbeing, maintain strong relationships with both parents, and provide stability during this transition.
+                </p>
+              </div>
 
-            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/parenting-plans-content-ndDL2cQPjcT7WTwGPCzJNQ.webp" alt="Happy co-parenting family" className="w-full h-auto" />
-            </div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">What Is a Parenting Plan?</h3>
+                <p className="text-muted-foreground mb-4">
+                  A parenting plan is a detailed agreement that outlines how parents will share responsibility for their children after separation or divorce. It covers custody, visitation schedules, decision-making authority, and other arrangements designed to ensure children's physical, emotional, and developmental needs are met.
+                </p>
+                <p className="text-muted-foreground">
+                  A well-crafted parenting plan provides clarity, reduces conflict, and gives children the security of knowing what to expect.
+                </p>
+              </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is a Parenting Plan?</h3>
-            <p className="text-muted-foreground mb-6">
-              A parenting plan is a detailed, written agreement that outlines how parents will share responsibilities for their children after separation or divorce. It covers custody arrangements, visitation schedules, decision-making authority, and practical matters affecting the children's daily lives. A well-developed parenting plan provides clarity, reduces conflict, and ensures children's needs are consistently met.
-            </p>
-
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Key Components of a Parenting Plan</h3>
-            <div className="grid md:grid-cols-2 gap-6 my-8">
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Custody Arrangements</h4>
-                <p className="text-muted-foreground text-sm">Determination of primary residence and legal custody, ensuring children have stability and security.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Visitation Schedule</h4>
-                <p className="text-muted-foreground text-sm">Detailed schedule for time with each parent, including weekdays, weekends, holidays, and school breaks.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Decision-Making Authority</h4>
-                <p className="text-muted-foreground text-sm">Clarification of who makes decisions regarding education, healthcare, religious upbringing, and major life choices.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Communication & Co-Parenting</h4>
-                <p className="text-muted-foreground text-sm">Guidelines for effective communication between parents and strategies for respectful co-parenting.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Financial Arrangements</h4>
-                <p className="text-muted-foreground text-sm">Details on child support, shared expenses, and how costs for education, healthcare, and activities are managed.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Dispute Resolution</h4>
-                <p className="text-muted-foreground text-sm">Process for addressing disagreements or changes needed as children grow and circumstances evolve.</p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Child-Centred Principles</h3>
-            <p className="text-muted-foreground mb-6">
-              At MediMagic, parenting plans are developed using child-centred principles that prioritise children's wellbeing:
-            </p>
-            <div className="space-y-4 my-8">
-              <div className="border-l-4 border-accent pl-6">
-                <h4 className="font-bold text-foreground mb-2">Best Interests of the Child</h4>
-                <p className="text-muted-foreground">All decisions are guided by what is best for the child's physical, emotional, and psychological wellbeing.</p>
-              </div>
-              <div className="border-l-4 border-accent pl-6">
-                <h4 className="font-bold text-foreground mb-2">Maintaining Relationships</h4>
-                <p className="text-muted-foreground">Plans ensure children maintain meaningful, consistent relationships with both parents whenever safe and appropriate.</p>
-              </div>
-              <div className="border-l-4 border-accent pl-6">
-                <h4 className="font-bold text-foreground mb-2">Stability & Continuity</h4>
-                <p className="text-muted-foreground">Arrangements minimise disruption to children's routines, schooling, and social relationships.</p>
-              </div>
-              <div className="border-l-4 border-accent pl-6">
-                <h4 className="font-bold text-foreground mb-2">Age-Appropriate Consideration</h4>
-                <p className="text-muted-foreground">Plans are tailored to children's ages and developmental stages, recognising that needs change as children grow.</p>
-              </div>
-              <div className="border-l-4 border-accent pl-6">
-                <h4 className="font-bold text-foreground mb-2">Respectful Co-Parenting</h4>
-                <p className="text-muted-foreground">Plans encourage parents to work together cooperatively, minimising conflict and protecting children from parental disputes.</p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">The Mediation Process for Parenting Plans</h3>
-            <div className="space-y-6 my-8">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    1
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Key Elements Addressed</h3>
+                <div className="space-y-3">
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Custody Arrangements</h4>
+                      <p className="text-sm text-muted-foreground">Determination of primary residence and shared custody arrangements that work for the family.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Visitation Schedules</h4>
+                      <p className="text-sm text-muted-foreground">Clear, detailed schedules for time with each parent, including weekdays, weekends, holidays, and school breaks.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Decision-Making Authority</h4>
+                      <p className="text-sm text-muted-foreground">Who makes decisions about education, healthcare, religion, and other important matters affecting the children.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Communication & Flexibility</h4>
+                      <p className="text-sm text-muted-foreground">Methods for parents to communicate about children and provisions for adjusting arrangements as children grow.</p>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Initial Assessment</h4>
-                  <p className="text-muted-foreground">Discussion of each parent's relationship with the children, work schedules, and parenting goals.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    2
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Child-Focused Discussion</h4>
-                  <p className="text-muted-foreground">Exploration of each child's needs, preferences, and how both parents can best support them.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    3
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Schedule Development</h4>
-                  <p className="text-muted-foreground">Creation of realistic, practical custody and visitation schedules that work for both parents and serve children's interests.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    4
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Decision-Making Framework</h4>
-                  <p className="text-muted-foreground">Agreement on how major decisions regarding education, healthcare, and other important matters will be made.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    5
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Documentation & Finalisation</h4>
-                  <p className="text-muted-foreground">Comprehensive parenting plan document that can be formalised through the court system.</p>
-                </div>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Benefits of Mediated Parenting Plans</h3>
-            <div className="space-y-3 my-8">
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Child-Focused:</strong> Plans prioritise children's wellbeing and best interests.</span>
+            {/* Right Column - Image and CTA */}
+            <div className="space-y-8">
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/parenting-plans-content-7Qjz9KPqEQfYNvWjXNXX.webp" 
+                  alt="Happy co-parenting family" 
+                  className="w-full h-auto"
+                />
               </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Practical & Realistic:</strong> Schedules are developed with input from both parents, making them more likely to work in practice.</span>
+
+              <Card className="p-8 bg-accent/5 border border-accent/20">
+                <h3 className="text-xl font-bold text-foreground mb-4">Our Child-Centred Approach</h3>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Children's best interests:</strong> All decisions prioritize children's wellbeing</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Both parents involved:</strong> Maintain meaningful relationships with both parents</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Stability & predictability:</strong> Clear schedules and expectations</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Flexibility:</strong> Plans that adapt as children grow and circumstances change</span>
+                  </li>
+                </ul>
+              </Card>
+
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 text-lg"
+                onClick={() => navigate("/booking")}
+              >
+                Book a Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Mediation Process */}
+      <section className="py-16 md:py-24 bg-accent/5">
+        <div className="container max-w-6xl">
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Creating Your Parenting Plan</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  1
+                </div>
               </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Flexible & Adaptable:</strong> Plans can be adjusted as children grow and circumstances change.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Reduces Conflict:</strong> Clear agreements reduce ongoing disputes and protect children from parental conflict.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Maintains Relationships:</strong> Ensures children have meaningful relationships with both parents.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Cost-Effective:</strong> Mediation is less expensive than litigation over custody disputes.</span>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Individual Consultations</h3>
+                <p className="text-muted-foreground">Separate meetings with each parent to understand their relationship with the children, work schedules, and parenting goals.</p>
               </div>
             </div>
 
-            <div className="bg-card border border-border p-8 rounded-lg my-12">
-              <h3 className="text-xl font-bold text-foreground mb-4">Important Note</h3>
-              <p className="text-muted-foreground">
-                Parenting plans should always prioritise children's safety and wellbeing. In cases involving domestic violence, abuse, or safety concerns, special arrangements and protections are necessary. We assess all situations carefully to ensure children are protected.
-              </p>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Joint Mediation Sessions</h3>
+                <p className="text-muted-foreground">Structured meetings where both parents discuss parenting arrangements, focusing on children's needs and practical logistics.</p>
+              </div>
             </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Problem-Solving & Negotiation</h3>
+                <p className="text-muted-foreground">Working through specific issues (schedules, holidays, decision-making) to find solutions that work for the whole family.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Documentation</h3>
+                <p className="text-muted-foreground">The agreed parenting plan is documented in a formal agreement that can be incorporated into the divorce decree.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 md:py-24">
+        <div className="container max-w-6xl">
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Benefits of Mediated Parenting Plans</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8">
+              <Heart className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Children's Wellbeing</h3>
+              <p className="text-muted-foreground">Plans designed with children's best interests at the centre, ensuring stability and meaningful relationships with both parents.</p>
+            </Card>
+
+            <Card className="p-8">
+              <Users className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Reduced Conflict</h3>
+              <p className="text-muted-foreground">Clear agreements reduce ongoing disputes, creating a more peaceful environment for children and parents.</p>
+            </Card>
+
+            <Card className="p-8">
+              <Calendar className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Practical & Flexible</h3>
+              <p className="text-muted-foreground">Plans that work in real life and can adapt as children grow and circumstances change.</p>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-primary/80">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Develop a Parenting Plan?
-          </h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Schedule a consultation to discuss how we can help you create a parenting plan that serves your children's best interests.
+      <section className="py-16 md:py-24 bg-gradient-to-r from-accent/10 via-teal-500/5 to-accent/10">
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-3xl font-bold text-foreground mb-6">Ready to Create a Parenting Plan That Works?</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Let us help you develop a parenting plan that prioritizes your children's wellbeing. Book a consultation with Cornelia today.
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            Schedule Consultation
+          <Button 
+            className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg"
+            onClick={() => navigate("/booking")}
+          >
+            Book Your Consultation Now
           </Button>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="font-bold text-lg mb-4">MediMagic</h3>
-              <p className="text-sm opacity-80">Professional mediation and social work services for complex life transitions.</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Services</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/"><a className="opacity-80 hover:opacity-100">Home</a></Link></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Mediation Services</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Social Work Services</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="tel:0640603592" className="opacity-80 hover:opacity-100">064 060 3592</a></li>
-                <li><a href="mailto:CorneliaGriessel@MediMagic.co.za" className="opacity-80 hover:opacity-100">CorneliaGriessel@MediMagic.co.za</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="opacity-80 hover:opacity-100">Privacy Policy</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Terms & Conditions</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-background/20 pt-8 text-center text-sm opacity-80">
-            <p>© 2026 MediMagic. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

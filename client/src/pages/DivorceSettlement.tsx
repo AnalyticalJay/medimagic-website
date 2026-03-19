@@ -1,29 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
-import { ArrowLeft, Check } from "lucide-react";
-
-/**
- * Design Philosophy: Humanist Wellness
- * - Service detail page for Divorce Settlement Agreements
- * - Soft teal palette with realistic imagery
- * - Clear process flow and benefits
- */
+import { Card } from "@/components/ui/card";
+import { ArrowLeft, Check, Clock, Users, FileText, Heart } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function DivorceSettlement() {
+  const [, navigate] = useLocation();
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between h-16">
-          <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">M</span>
-              </div>
-              <span className="font-bold text-lg text-foreground">MediMagic</span>
-            </div>
-          </Link>
-          <Button variant="ghost" size="sm">
+          <button onClick={() => navigate("/")} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/medimagic_logo_e9a0b25b.webp" 
+              alt="MediMagic Logo"
+              className="h-8 w-auto"
+            />
+          </button>
+          <Button variant="ghost" size="sm" onClick={() => navigate("/")}>
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Button>
@@ -48,205 +43,210 @@ export default function DivorceSettlement() {
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Main Content - Two Column Layout */}
       <section className="py-16 md:py-24">
-        <div className="container max-w-4xl">
-          <div className="prose prose-invert max-w-none">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Understanding Divorce Settlement Mediation</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Divorce is one of life's most significant transitions. Beyond the emotional complexity, there are critical legal and financial decisions that must be made—decisions that will affect your future and that of your children. At MediMagic, we provide structured mediation to help you navigate these decisions with clarity, fairness, and mutual respect.
-            </p>
+        <div className="container max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Understanding Divorce Settlement Mediation</h2>
+                <p className="text-lg text-muted-foreground">
+                  Divorce is one of life's most significant transitions. Beyond the emotional complexity, there are critical legal and financial decisions that must be made—decisions that will affect your future and that of your children. At MediMagic, we provide structured mediation to help you navigate these decisions with clarity, fairness, and mutual respect.
+                </p>
+              </div>
 
-            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/divorce-settlement-content-DmHrPDmfmbWrYivJ4TUKze.webp" alt="Professional divorce mediation" className="w-full h-auto" />
-            </div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">What Is Divorce Settlement Mediation?</h3>
+                <p className="text-muted-foreground mb-4">
+                  Divorce settlement mediation is a structured process in which a neutral, trained mediator helps both spouses communicate effectively and reach agreement on the key issues in their divorce. Rather than adversarial litigation, mediation focuses on collaborative problem-solving—allowing both parties to maintain control over the outcome and preserve dignity throughout the process.
+                </p>
+                <p className="text-muted-foreground">
+                  This approach is not only more cost-effective than litigation but also typically faster, less emotionally draining, and results in agreements that both parties feel invested in—creating a stronger foundation for post-divorce relationships, especially when children are involved.
+                </p>
+              </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is Divorce Settlement Mediation?</h3>
-            <p className="text-muted-foreground mb-6">
-              Divorce settlement mediation is a structured process in which a neutral, trained mediator helps both spouses communicate effectively and reach agreement on the key issues in their divorce. Rather than adversarial litigation, mediation focuses on collaborative problem-solving—allowing both parties to maintain control over the outcome and preserve dignity throughout the process.
-            </p>
-
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Key Areas Addressed</h3>
-            <div className="grid md:grid-cols-2 gap-6 my-8">
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Asset & Property Division</h4>
-                <p className="text-muted-foreground text-sm">Fair and equitable division of marital property, including real estate, investments, and personal assets.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Financial Support</h4>
-                <p className="text-muted-foreground text-sm">Determination of spousal maintenance or alimony arrangements that are sustainable and fair.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Parenting Arrangements</h4>
-                <p className="text-muted-foreground text-sm">Development of child-centred parenting plans that prioritise children's wellbeing and stability.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Child Support</h4>
-                <p className="text-muted-foreground text-sm">Fair determination of financial support for children based on both parents' circumstances.</p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">The Mediation Process</h3>
-            <div className="space-y-6 my-8">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    1
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Key Areas Addressed</h3>
+                <div className="space-y-3">
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Asset & Property Division</h4>
+                      <p className="text-sm text-muted-foreground">Fair and equitable division of marital property, including real estate, investments, and personal assets.</p>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Initial Consultation</h4>
-                  <p className="text-muted-foreground">Individual confidential meetings with each spouse to understand their perspective, concerns, and goals. This helps establish whether mediation is appropriate and what issues need to be addressed.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    2
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Financial Support</h4>
+                      <p className="text-sm text-muted-foreground">Determination of spousal maintenance or alimony arrangements that are sustainable and fair.</p>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Information Gathering</h4>
-                  <p className="text-muted-foreground">Collection of relevant financial documents, property valuations, and other information necessary for informed decision-making. All parties receive the same information to ensure transparency.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    3
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Parenting Arrangements</h4>
+                      <p className="text-sm text-muted-foreground">Development of child-centred parenting plans that prioritise children's wellbeing and stability.</p>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Joint Mediation Sessions</h4>
-                  <p className="text-muted-foreground">Structured sessions where both parties meet with the mediator to discuss issues, express concerns, and explore potential solutions. The mediator ensures balanced communication and keeps discussions focused on resolution.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    4
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Child Support</h4>
+                      <p className="text-sm text-muted-foreground">Fair determination of financial support for children based on both parents' circumstances.</p>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Agreement Drafting</h4>
-                  <p className="text-muted-foreground">Once consensus is reached on all issues, a comprehensive settlement agreement is drafted that accurately reflects the decisions made by both parties.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    5
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Legal Finalisation</h4>
-                  <p className="text-muted-foreground">Guidance on the legal steps required to formalise the agreement through the court system, with support in ensuring all documentation is complete and accurate.</p>
                 </div>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Benefits of Mediated Divorce Settlements</h3>
-            <div className="space-y-3 my-8">
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Cost-Effective:</strong> Mediation is typically significantly less expensive than adversarial litigation.</span>
+            {/* Right Column - Image and CTA */}
+            <div className="space-y-8">
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/divorce-settlement-content-DmHrPDmfmbWrYivJ4TUKze.webp" 
+                  alt="Professional divorce mediation" 
+                  className="w-full h-auto"
+                />
               </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Faster Resolution:</strong> Mediation typically resolves disputes more quickly than court proceedings.</span>
+
+              <Card className="p-8 bg-accent/5 border border-accent/20">
+                <h3 className="text-xl font-bold text-foreground mb-4">Why Choose Mediation?</h3>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Cost-effective:</strong> Significantly less expensive than litigation</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Faster resolution:</strong> Typically resolved in weeks, not years</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Control:</strong> Both parties maintain control over decisions</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Confidentiality:</strong> Private process, not public court records</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Dignity:</strong> Respectful, non-adversarial approach</span>
+                  </li>
+                </ul>
+              </Card>
+
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 text-lg"
+                onClick={() => navigate("/booking")}
+              >
+                Book a Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Mediation Process */}
+      <section className="py-16 md:py-24 bg-accent/5">
+        <div className="container max-w-6xl">
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">The Mediation Process</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  1
+                </div>
               </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Control & Autonomy:</strong> Both parties maintain control over the outcome rather than having a judge decide for them.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Confidentiality:</strong> Mediation sessions are confidential, protecting privacy and sensitive information.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Preserves Relationships:</strong> By focusing on collaboration rather than conflict, mediation helps preserve relationships, particularly important when children are involved.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Fair & Balanced:</strong> A neutral mediator ensures both parties are heard equally and that agreements are fair to all involved.</span>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Initial Consultation</h3>
+                <p className="text-muted-foreground">Individual confidential meetings with each spouse to understand their perspective, concerns, and goals. This helps establish whether mediation is appropriate and what issues need to be addressed.</p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Who Can Benefit?</h3>
-            <p className="text-muted-foreground mb-6">
-              Divorce settlement mediation is valuable for couples who:
-            </p>
-            <ul className="space-y-2 text-muted-foreground mb-8">
-              <li className="flex gap-3"><span className="text-accent">•</span> Want to avoid the cost and stress of litigation</li>
-              <li className="flex gap-3"><span className="text-accent">•</span> Wish to maintain control over the outcome</li>
-              <li className="flex gap-3"><span className="text-accent">•</span> Have children and want to prioritise their wellbeing</li>
-              <li className="flex gap-3"><span className="text-accent">•</span> Prefer a confidential, private process</li>
-              <li className="flex gap-3"><span className="text-accent">•</span> Seek a faster resolution</li>
-              <li className="flex gap-3"><span className="text-accent">•</span> Want to preserve mutual respect and dignity</li>
-            </ul>
-
-            <div className="bg-card border border-border p-8 rounded-lg my-12">
-              <h3 className="text-xl font-bold text-foreground mb-4">Important Note</h3>
-              <p className="text-muted-foreground">
-                Mediation is not appropriate in all situations. If there is a history of domestic violence, abuse, or significant power imbalances, alternative approaches may be necessary. During the initial consultation, we assess whether mediation is suitable for your circumstances and can recommend other resources if needed.
-              </p>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  2
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Joint Mediation Sessions</h3>
+                <p className="text-muted-foreground">Structured meetings where both spouses meet with the mediator to discuss issues, exchange information, and work toward agreements. The mediator facilitates communication and ensures both parties are heard.</p>
+              </div>
             </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Information Gathering</h3>
+                <p className="text-muted-foreground">Full financial disclosure and documentation of all assets, liabilities, income, and expenses. This transparency is essential for fair decision-making and creating legally sound agreements.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Agreement & Documentation</h3>
+                <p className="text-muted-foreground">Once agreements are reached, they are documented in a Memorandum of Understanding. Both parties can then have their lawyers review before finalising the divorce settlement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 md:py-24">
+        <div className="container max-w-6xl">
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Benefits of Our Approach</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8">
+              <FileText className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Legally Sound Agreements</h3>
+              <p className="text-muted-foreground">Our mediated agreements are comprehensive, fair, and legally enforceable, protecting both parties' interests long-term.</p>
+            </Card>
+
+            <Card className="p-8">
+              <Users className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Preserves Relationships</h3>
+              <p className="text-muted-foreground">By avoiding adversarial litigation, mediation helps preserve respect and communication—especially important for co-parenting relationships.</p>
+            </Card>
+
+            <Card className="p-8">
+              <Clock className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Time & Cost Efficient</h3>
+              <p className="text-muted-foreground">Mediation typically takes weeks rather than years, and costs a fraction of contested litigation—saving money and emotional energy.</p>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-primary/80">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Explore Mediation?
-          </h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Schedule a confidential consultation to discuss your situation and learn how mediation can help you reach a fair settlement.
+      <section className="py-16 md:py-24 bg-gradient-to-r from-accent/10 via-teal-500/5 to-accent/10">
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-3xl font-bold text-foreground mb-6">Ready to Move Forward?</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Take the first step toward a fair, respectful divorce settlement. Book a consultation with Cornelia today.
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            Schedule Consultation
+          <Button 
+            className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg"
+            onClick={() => navigate("/booking")}
+          >
+            Book Your Consultation Now
           </Button>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="font-bold text-lg mb-4">MediMagic</h3>
-              <p className="text-sm opacity-80">Professional mediation and social work services for complex life transitions.</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Services</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/"><a className="opacity-80 hover:opacity-100">Home</a></Link></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Mediation Services</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Social Work Services</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="tel:0640603592" className="opacity-80 hover:opacity-100">064 060 3592</a></li>
-                <li><a href="mailto:CorneliaGriessel@MediMagic.co.za" className="opacity-80 hover:opacity-100">CorneliaGriessel@MediMagic.co.za</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="opacity-80 hover:opacity-100">Privacy Policy</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Terms & Conditions</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-background/20 pt-8 text-center text-sm opacity-80">
-            <p>© 2026 MediMagic. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
