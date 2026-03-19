@@ -192,12 +192,12 @@ export default function Home() {
       </section>
 
       {/* Slogan Section */}
-      <section className="py-4 border-y-4 border-accent relative overflow-hidden">
-        <div className="absolute top-4 right-8 text-accent/20 text-6xl">✦</div>
-        <div className="absolute bottom-4 left-8 text-accent/20 text-5xl">✦</div>
+      <section className="py-16 md:py-24 bg-gradient-to-r from-primary/5 to-teal-500/5 border-y-4 border-accent relative overflow-hidden">
+        <div className="absolute top-8 right-8 text-accent/30 text-8xl animate-text-pulse">✦</div>
+        <div className="absolute bottom-8 left-8 text-accent/30 text-7xl animate-text-pulse" style={{animationDelay: '0.5s'}}>✦</div>
         <div className="container text-center relative z-10">
-          <p className="slogan text-2xl md:text-3xl font-bold">
-            Changing <span className="slogan-highlight text-3xl md:text-4xl">SCARS</span> into <span className="slogan-highlight text-3xl md:text-4xl">STARS</span> — One <span className="slogan-highlight text-3xl md:text-4xl">BATTLE</span> at a time
+          <p className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight">
+            Changing <span className="animate-text-glow text-accent font-black">SCARS</span> into <span className="animate-text-glow text-accent font-black" style={{animationDelay: '0.5s'}}>STARS</span> — One <span className="animate-text-glow text-accent font-black" style={{animationDelay: '1s'}}>BATTLE</span> at a time
           </p>
         </div>
       </section>

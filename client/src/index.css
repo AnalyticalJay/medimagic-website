@@ -525,3 +525,65 @@ html {
 .animate-delay-500 {
   animation-delay: 0.5s;
 }
+
+
+/* Animated Text Effects for Slogan */
+@keyframes textPulse {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(139, 195, 74, 0.5);
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 20px rgba(139, 195, 74, 0.8), 0 0 30px rgba(47, 111, 115, 0.6);
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(139, 195, 74, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(139, 195, 74, 0.8), 0 0 40px rgba(139, 195, 74, 0.5);
+  }
+}
+
+@keyframes textBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes textShine {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Animated Text Utility Classes */
+.animate-text-pulse {
+  animation: textPulse 2s ease-in-out infinite;
+}
+
+.animate-text-glow {
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+.animate-text-bounce {
+  animation: textBounce 2s ease-in-out infinite;
+}
+
+.animate-text-shine {
+  background: linear-gradient(90deg, #8BC34A, #2F6F73, #8BC34A);
+  background-size: 1000px 100%;
+  animation: textShine 4s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
