@@ -26,16 +26,17 @@ export default function PalliativeCare() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-r from-primary/10 to-accent/10">
-        <div className="container">
+      <section className="relative py-16 md:py-24 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/palliative-care-hero-34SwgVS27aigQBtej9z34w.webp)'}}>
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="container relative z-10">
           <div className="max-w-3xl">
             <div className="inline-block px-3 py-1 bg-accent/20 rounded-full text-sm font-medium text-accent mb-4">
               SOCIAL WORK SERVICE
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Palliative & End-of-Life Care
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-white/90">
               Sensitive support for families navigating end-of-life transitions, communication, and grief.
             </p>
           </div>
