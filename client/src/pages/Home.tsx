@@ -137,12 +137,17 @@ export default function Home() {
       </section>
 
       {/* Mediation Services Section */}
-      <section id="services" className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-background">
+        {/* Section Header Banner */}
+        <div className="bg-primary/10 border-l-4 border-accent py-4 mb-12">
+          <div className="container">
+            <h2 className="text-2xl md:text-3xl font-bold">
+              <span className="text-accent font-bold">Mediation</span> <span className="text-foreground">Services</span>
+            </h2>
+          </div>
+        </div>
         <div className="container">
           <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              <span className="text-accent">Mediation</span> Services
-            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl">
               Structured Solutions for Complex Disputes. Mediation offers a practical, confidential, and future-focused alternative to litigation. At MediMagic, mediation is approached with structure, neutrality, and a clear focus on resolution.
             </p>
@@ -230,11 +235,16 @@ export default function Home() {
 
       {/* Social Work Services Section */}
       <section className="py-16 md:py-24 bg-card">
+        {/* Section Header Banner */}
+        <div className="bg-primary/10 border-l-4 border-accent py-4 mb-12">
+          <div className="container">
+            <h2 className="text-2xl md:text-3xl font-bold">
+              <span className="text-accent font-bold">Social Work</span> <span className="text-foreground">Services</span>
+            </h2>
+          </div>
+        </div>
         <div className="container">
           <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              <span className="text-accent">Social Work</span> Services
-            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl">
               Supporting Stability Through Life Transitions. Social work services at MediMagic focus on emotional stability, resilience, and practical support during periods of change, illness, or conflict.
             </p>
