@@ -126,7 +126,7 @@ export default function Home() {
             backgroundBlendMode: 'overlay'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-teal-600/75 to-teal-500/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-teal-600/75 to-teal-500/30" />
         <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
@@ -193,6 +193,9 @@ export default function Home() {
               <p className="text-lg text-muted-foreground">
                 We focus on helping individuals move forward with clarity, dignity, and stability through structured, ethical, and client-centred care.
               </p>
+              <button className="cta-button mt-6 inline-flex items-center">
+                Learn About Cornelia <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
             </div>
             
             {/* Right Column: Key Features with Icons */}
@@ -587,38 +590,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-16 md:py-24 bg-pattern-gradient-subtle">
-        <div className="container max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            About Cornelia Griessel
-          </h2>
-          <p className="text-lg text-muted-foreground mb-4">
-            Cornelia Griessel is a dually trained and registered social worker and family mediator with extensive experience in medical social work, family mediation, and child-centred practice.
-          </p>
-          <p className="text-lg text-muted-foreground mb-4">
-            Her professional background includes over two decades of service within a multidisciplinary healthcare environment, as well as the founding and long-term management of a registered childcare non-profit organisation.
-          </p>
-          <p className="text-lg text-muted-foreground">
-            Cornelia's work is guided by neutrality, clarity, and a strong commitment to protecting the wellbeing of vulnerable individuals — particularly children — while facilitating fair and responsible outcomes.
-          </p>
-
-          <div className="flex gap-6 mt-8 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-accent" />
-              <span>FAMAC Accredited Mediator</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-accent" />
-              <span>SASW Registered Social Worker</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-accent" />
-              <span>20+ Years Experience</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section - Ready to Move Forward */}
       <section className="py-16 md:py-24 relative overflow-hidden" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/cta-background-get-started-5qiKx5BMkiWBm6x7KohdTj.webp)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
