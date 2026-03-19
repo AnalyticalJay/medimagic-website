@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { ArrowRight, Check, Zap, Heart, Users, Shield, CheckCircle, Lock, Baby, Award, Menu, X, ChevronDown } from "lucide-react";
+import { ArrowRight, Check, Zap, Heart, Users, Shield, CheckCircle, Lock, Baby, Award, Menu, X, ChevronDown, Plus, Minus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -14,6 +14,42 @@ import { useState } from "react";
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const faqItems = [
+    {
+      question: "What is the difference between mediation and social work support?",
+      answer: "Mediation focuses on structured, neutral facilitation of agreements between parties—such as divorce settlements or parenting plans. Social work support addresses the emotional, practical, and psychological aspects of life transitions, illness, or conflict. MediMagic uniquely integrates both services, addressing both decision-making and emotional wellbeing."
+    },
+    {
+      question: "Is mediation confidential?",
+      answer: "Yes. All mediation sessions are confidential and conducted with strict impartiality. Information shared during mediation cannot be used in court proceedings. This confidentiality creates a safe space for open, honest communication."
+    },
+    {
+      question: "How long does the mediation process typically take?",
+      answer: "The timeline varies depending on the complexity of the issues and the parties' readiness to reach agreement. Simple matters may be resolved in 2-3 sessions, while more complex disputes may require 5-8 sessions. Each process is tailored to the specific needs and pace of the individuals involved."
+    },
+    {
+      question: "Can children be involved in the mediation process?",
+      answer: "Children are not typically present in mediation sessions between adults. However, MediMagic offers the 'Voice of the Child' service, where children's perspectives are professionally gathered and considered in decisions affecting them. This ensures their wellbeing remains central to outcomes."
+    },
+    {
+      question: "What if we cannot reach agreement through mediation?",
+      answer: "Mediation is voluntary and non-binding. If parties cannot reach agreement, they retain the right to pursue litigation or other dispute resolution methods. However, mediation often clarifies issues and reduces conflict, making subsequent processes more efficient and less adversarial."
+    },
+    {
+      question: "Are online consultations as effective as in-person sessions?",
+      answer: "Yes. Online consultations are conducted through secure, encrypted platforms and provide the same level of professional support and confidentiality as in-person sessions. Many clients appreciate the flexibility and accessibility of remote services."
+    },
+    {
+      question: "How do I know if mediation is right for my situation?",
+      answer: "Mediation works best when both parties are willing to engage in good-faith dialogue and seek fair resolution. It's effective for divorce agreements, parenting plans, maintenance disputes, and family conflicts. Contact MediMagic for a confidential consultation to discuss whether mediation is appropriate for your circumstances."
+    },
+    {
+      question: "What qualifications does Cornelia hold?",
+      answer: "Cornelia is a FAMAC Accredited Mediator and SASW Registered Social Worker with over 20 years of professional experience in medical social work, family mediation, and child-centred practice. She is bound by strict professional ethical codes and regulatory standards."
+    }
+  ];
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Navigation */}
@@ -558,6 +594,51 @@ export default function Home() {
           <button className="cta-button-secondary inline-flex items-center">
             Get Started Today <ArrowRight className="ml-2 w-4 h-4" />
           </button>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 md:py-32 bg-muted/30">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Find answers to common questions about our mediation and social work services.
+            </p>
+          </div>
+          
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqItems.map((item, index) => (
+              <div key={index} className="border border-border rounded-lg overflow-hidden bg-background shadow-sm hover:shadow-md transition-shadow">
+                <button
+                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-muted/50 transition-colors text-left"
+                >
+                  <span className="font-semibold text-foreground pr-4">{item.question}</span>
+                  <div className="flex-shrink-0">
+                    {openFaqIndex === index ? (
+                      <Minus className="w-5 h-5 text-accent" />
+                    ) : (
+                      <Plus className="w-5 h-5 text-muted-foreground" />
+                    )}
+                  </div>
+                </button>
+                
+                {openFaqIndex === index && (
+                  <div className="px-6 py-4 bg-muted/20 border-t border-border">
+                    <p className="text-foreground/80 leading-relaxed">{item.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-4">Still have questions?</p>
+            <button className="cta-button inline-flex items-center">
+              Contact Us <ArrowRight className="ml-2 w-4 h-4" />
+            </button>
+          </div>
         </div>
       </section>
 
