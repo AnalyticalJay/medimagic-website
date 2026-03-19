@@ -22,6 +22,7 @@ export default function About() {
           </button>
           <div className="hidden md:flex items-center gap-8">
             <button onClick={() => navigate("/")} className="text-foreground hover:text-accent transition-colors">Home</button>
+            <button onClick={() => navigate("/about")} className="text-foreground hover:text-accent transition-colors font-semibold text-accent">About</button>
             <div className="relative group">
               <button className="flex items-center gap-1 text-foreground hover:text-accent transition-colors">
                 Mediation
@@ -51,7 +52,6 @@ export default function About() {
               </div>
             </div>
             <button onClick={() => navigate("/contact")} className="text-foreground hover:text-accent transition-colors">Contact</button>
-            <button onClick={() => navigate("/about")} className="text-foreground hover:text-accent transition-colors font-semibold text-accent">About</button>
             <Button className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => navigate("/booking")}>
               Get Started
             </Button>

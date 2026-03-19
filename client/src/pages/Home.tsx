@@ -72,6 +72,7 @@ export default function Home() {
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="/" className="text-foreground hover:text-accent transition-colors font-medium">Home</a>
+            <a href="/about" className="text-foreground hover:text-accent transition-colors">About</a>
             
             {/* Mediation Dropdown */}
             <div className="relative group">
@@ -106,7 +107,6 @@ export default function Home() {
             </div>
             
             <a href="/contact" className="text-foreground hover:text-accent transition-colors">Contact</a>
-            <a href="/about" className="text-foreground hover:text-accent transition-colors">About</a>
             <Button 
               className="bg-accent hover:bg-accent/90 text-accent-foreground"
               onClick={() => navigate("/booking")}
@@ -131,10 +131,10 @@ export default function Home() {
           <div className="md:hidden bg-background border-t border-border">
             <div className="container py-4 space-y-3">
                 <a href="/" className="block text-foreground hover:text-accent transition-colors py-2">Home</a>
+              <a href="/about" className="block text-foreground hover:text-accent transition-colors py-2">About</a>
               <a href="/services/divorce-settlement" className="block text-foreground hover:text-accent transition-colors py-2 pl-4">Mediation Services</a>
               <a href="/services/adult-divorce-preparation" className="block text-foreground hover:text-accent transition-colors py-2 pl-4">Social Work Services</a>
               <a href="/contact" className="block text-foreground hover:text-accent transition-colors py-2">Contact</a>
-              <a href="/about" className="block text-foreground hover:text-accent transition-colors py-2">About</a>
               <Button 
                 className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                 onClick={() => navigate("/booking")}
