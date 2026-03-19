@@ -570,15 +570,7 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-teal-500/20" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">💻</div>
-                  <p className="text-foreground font-semibold text-lg">Professional Support, Anytime, Anywhere</p>
-                  <p className="text-muted-foreground mt-2">Secure online consultations available nationwide</p>
-                </div>
-              </div>
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/online-consultation-video-call-Box4BtmtbKhax2oGMAMGnX.webp)'}}>
             </div>
           </div>
         </div>
