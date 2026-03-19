@@ -207,7 +207,7 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Column: Welcome Text */}
-            <div>
+            <div className="scroll-animate-slide-left">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Welcome to MediMagic
               </h2>
@@ -263,7 +263,7 @@ export default function Home() {
       {/* Mediation Services Section */}
       <section className="py-8 bg-background">
         {/* Section Header Banner */}
-        <div className="bg-primary/10 border-l-4 border-accent py-4 mb-12">
+        <div className="bg-primary/10 border-l-4 border-accent py-4 mb-12 scroll-animate-fade-in">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold text-center">
               <span className="text-accent font-bold">Mediation</span> <span className="text-foreground">Services</span>
@@ -360,7 +360,7 @@ export default function Home() {
       {/* Social Work Services Section */}
       <section className="py-8 bg-card">
         {/* Section Header Banner */}
-        <div className="bg-primary/10 border-l-4 border-accent py-4 mb-12">
+        <div className="bg-primary/10 border-l-4 border-accent py-4 mb-12 scroll-animate-fade-in">
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-bold text-center">
               <span className="text-accent font-bold">Social Work</span> <span className="text-foreground">Services</span>
@@ -508,7 +508,7 @@ export default function Home() {
       {/* How It Works Section */}
       <section className="py-8 bg-background pattern-diagonal">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center scroll-animate-fade-in">
             Professional Standards You Can Trust
           </h2>
 
@@ -631,8 +631,9 @@ export default function Home() {
         </div>
       </section>
       {/* FAQ Section */}
-      <section className="py-8 bg-background">        <div className="container">
-          <div className="text-center mb-16">
+      <section className="py-8 bg-background">
+        <div className="container">
+          <div className="text-center mb-16 scroll-animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Find answers to common questions about our mediation and social work services.
