@@ -637,8 +637,8 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12 p-8 rounded-lg" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/cta-background-consultation-Luc6yms9wcZAcXsWrkam34.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
-            <div className="absolute inset-0 bg-black/40 rounded-lg" />
+          <div className="text-center mt-12 p-8" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/cta-background-consultation-Luc6yms9wcZAcXsWrkam34.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
+            <div className="absolute inset-0 bg-black/40" />
             <div className="relative z-10">
               <p className="text-white/90 mb-4 font-semibold text-lg">Still have questions?</p>
               <button className="cta-button inline-flex items-center">
