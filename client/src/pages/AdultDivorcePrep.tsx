@@ -1,27 +1,27 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
-import { ArrowLeft, Check } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { ArrowLeft, Check, Heart, Lightbulb, Users } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function AdultDivorcePrep() {
+  const [, navigate] = useLocation();
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container flex items-center justify-between h-16">
-          <Link href="/">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">M</span>
-              </div>
-              <span className="font-bold text-lg text-foreground">MediMagic</span>
-            </div>
-          </Link>
-          <Link href="/">
-            <Button variant="ghost" size="sm" className="cursor-pointer">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Button>
-          </Link>
+          <button onClick={() => navigate("/")} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/medimagic_logo_e9a0b25b.webp" 
+              alt="MediMagic Logo"
+              className="h-8 w-auto"
+            />
+          </button>
+          <Button variant="ghost" size="sm" onClick={() => navigate("/")}>
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
+          </Button>
         </div>
       </nav>
 
@@ -37,219 +37,212 @@ export default function AdultDivorcePrep() {
               Adult Divorce Preparation
             </h1>
             <p className="text-xl text-white/90">
-              Emotional and practical support for individuals navigating the personal challenges of divorce and separation.
+              Compassionate support helping adults navigate the emotional and practical aspects of divorce.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Main Content - Two Column Layout */}
       <section className="py-16 md:py-24">
-        <div className="container max-w-4xl">
-          <div className="prose prose-invert max-w-none">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Supporting You Through Divorce</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Divorce is more than a legal process—it's a profound personal transition that affects every aspect of your life. Beyond the practical and financial decisions, divorce involves significant emotional challenges: grief, anger, uncertainty about the future, and questions about identity and self-worth. At MediMagic, our adult divorce preparation services provide emotional and practical support to help you navigate this transition with resilience and clarity.
-            </p>
+        <div className="container max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Preparing for Life After Divorce</h2>
+                <p className="text-lg text-muted-foreground">
+                  Divorce is one of life's most challenging transitions. Beyond the legal and financial aspects, it involves significant emotional, social, and practical changes. At MediMagic, our Adult Divorce Preparation service provides comprehensive support to help you navigate this transition with confidence and resilience.
+                </p>
+              </div>
 
-            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/adult-divorce-prep-content-BpiLE6xBKiRVZshSMf7n8w.webp" alt="Emotional support and compassionate care" className="w-full h-auto" />
-            </div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">What Is Adult Divorce Preparation?</h3>
+                <p className="text-muted-foreground mb-4">
+                  Adult Divorce Preparation is a social work service that helps adults process the emotional impact of divorce, develop practical coping strategies, and build resilience for life after divorce. Through individual sessions, we address emotional wellbeing, financial planning, social reintegration, and personal growth.
+                </p>
+                <p className="text-muted-foreground">
+                  This service acknowledges that divorce affects not just legal status, but your entire life—and we're here to help you rebuild.
+                </p>
+              </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is Adult Divorce Preparation?</h3>
-            <p className="text-muted-foreground mb-6">
-              Adult divorce preparation is professional social work support designed to help individuals process the emotional dimensions of divorce while preparing for the practical realities of life after separation. It combines emotional support, practical guidance, and coping strategies to help you move forward with confidence and stability.
-            </p>
-
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Areas of Support</h3>
-            <div className="grid md:grid-cols-2 gap-6 my-8">
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Emotional Processing</h4>
-                <p className="text-muted-foreground text-sm">Help processing grief, anger, loss, and other emotions that arise during divorce.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Identity & Self-Esteem</h4>
-                <p className="text-muted-foreground text-sm">Support rebuilding your sense of self and identity after the end of a marriage.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Practical Planning</h4>
-                <p className="text-muted-foreground text-sm">Guidance on financial planning, housing, employment, and other practical matters.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Coping Strategies</h4>
-                <p className="text-muted-foreground text-sm">Development of healthy coping mechanisms and stress management techniques.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Social & Family Relationships</h4>
-                <p className="text-muted-foreground text-sm">Navigation of changes in relationships with family, friends, and social networks.</p>
-              </div>
-              <div className="p-6 bg-card border border-border rounded-lg">
-                <h4 className="font-bold text-foreground mb-3">Future Planning</h4>
-                <p className="text-muted-foreground text-sm">Support in envisioning and planning for a positive future after divorce.</p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">The Support Process</h3>
-            <div className="space-y-6 my-8">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    1
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Areas We Support</h3>
+                <div className="space-y-3">
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Emotional Processing</h4>
+                      <p className="text-sm text-muted-foreground">Working through grief, anger, loss, and other emotions that arise during divorce.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Practical Planning</h4>
+                      <p className="text-sm text-muted-foreground">Strategies for managing finances, housing, employment, and daily living arrangements.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Social Reintegration</h4>
+                      <p className="text-sm text-muted-foreground">Rebuilding social networks, managing relationships, and redefining your identity.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3">
+                    <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-foreground">Self-Care & Resilience</h4>
+                      <p className="text-sm text-muted-foreground">Building healthy coping strategies and developing resilience for moving forward.</p>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Initial Assessment</h4>
-                  <p className="text-muted-foreground">Understanding your situation, concerns, and goals for support.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    2
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Emotional Support</h4>
-                  <p className="text-muted-foreground">Safe space to process emotions and develop healthy coping strategies.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    3
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Practical Guidance</h4>
-                  <p className="text-muted-foreground">Support with financial planning, housing, employment, and other practical concerns.</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-accent text-accent-foreground font-bold">
-                    4
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">Future Planning</h4>
-                  <p className="text-muted-foreground">Support in envisioning and planning for a positive, independent future.</p>
-                </div>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Common Challenges Addressed</h3>
-            <div className="space-y-3 my-8">
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground">Grief and loss related to the end of the marriage</span>
+            {/* Right Column - Image and CTA */}
+            <div className="space-y-8">
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/adult-divorce-prep-content-BpiLE6xBKiRVZshSMf7n8w.webp" 
+                  alt="Emotional support and healing" 
+                  className="w-full h-auto"
+                />
               </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground">Anger, resentment, and conflict with ex-partner</span>
+
+              <Card className="p-8 bg-accent/5 border border-accent/20">
+                <h3 className="text-xl font-bold text-foreground mb-4">Our Compassionate Approach</h3>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Non-judgmental:</strong> A safe space to express all your feelings</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Holistic:</strong> Addressing emotional, practical, and social aspects</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Empowering:</strong> Building your confidence and resilience</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-accent font-bold">✓</span>
+                    <span className="text-muted-foreground"><strong>Practical:</strong> Actionable strategies you can use immediately</span>
+                  </li>
+                </ul>
+              </Card>
+
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-6 text-lg"
+                onClick={() => navigate("/booking")}
+              >
+                Book a Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Support Process */}
+      <section className="py-16 md:py-24 bg-accent/5">
+        <div className="container max-w-6xl">
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Your Divorce Preparation Journey</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  1
+                </div>
               </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground">Anxiety about the future and financial security</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground">Loss of identity and self-esteem</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground">Social isolation and changes in relationships</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground">Practical concerns about housing, finances, and employment</span>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Initial Assessment</h3>
+                <p className="text-muted-foreground">Understanding your current situation, challenges, and goals for moving forward.</p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">Benefits of Adult Divorce Preparation</h3>
-            <div className="space-y-3 my-8">
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Emotional Resilience:</strong> Develop healthy coping strategies and emotional resilience.</span>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  2
+                </div>
               </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Clarity & Direction:</strong> Gain clarity about your situation and direction for the future.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Practical Preparation:</strong> Prepare practically for life after divorce.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Reduced Stress:</strong> Professional support reduces stress and anxiety.</span>
-              </div>
-              <div className="flex gap-3">
-                <Check className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                <span className="text-muted-foreground"><strong className="text-foreground">Positive Transition:</strong> Move forward with confidence and hope for the future.</span>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Emotional Support</h3>
+                <p className="text-muted-foreground">Processing emotions, developing coping strategies, and building emotional resilience.</p>
               </div>
             </div>
 
-            <div className="bg-card border border-border p-8 rounded-lg my-12">
-              <h3 className="text-xl font-bold text-foreground mb-4">Confidential & Supportive</h3>
-              <p className="text-muted-foreground">
-                All adult divorce preparation support is provided in a confidential, non-judgmental environment. Your feelings, concerns, and experiences are respected and validated. Support is tailored to your unique needs and circumstances.
-              </p>
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  3
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Practical Planning</h3>
+                <p className="text-muted-foreground">Developing strategies for financial management, housing, and daily life adjustments.</p>
+              </div>
             </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-accent text-accent-foreground font-bold text-lg">
+                  4
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Moving Forward</h3>
+                <p className="text-muted-foreground">Building new identity, social connections, and creating a positive vision for your future.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 md:py-24">
+        <div className="container max-w-6xl">
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Benefits of Divorce Preparation Support</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8">
+              <Heart className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Emotional Healing</h3>
+              <p className="text-muted-foreground">Process difficult emotions in a safe, supportive environment with professional guidance.</p>
+            </Card>
+
+            <Card className="p-8">
+              <Lightbulb className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Practical Strategies</h3>
+              <p className="text-muted-foreground">Develop actionable plans for managing finances, housing, employment, and daily challenges.</p>
+            </Card>
+
+            <Card className="p-8">
+              <Users className="w-10 h-10 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-foreground mb-3">Social Reintegration</h3>
+              <p className="text-muted-foreground">Rebuild your social network and create a positive new identity after divorce.</p>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-primary/80">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready for Support?
-          </h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Schedule a consultation to discuss how adult divorce preparation can support you through this transition.
+      <section className="py-16 md:py-24 bg-gradient-to-r from-accent/10 via-teal-500/5 to-accent/10">
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-3xl font-bold text-foreground mb-6">Ready to Navigate Your Divorce with Support?</h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Let us help you process this transition and build a positive future. Book a consultation with Cornelia today.
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            Schedule Consultation
+          <Button 
+            className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg"
+            onClick={() => navigate("/booking")}
+          >
+            Book Your Consultation Now
           </Button>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="font-bold text-lg mb-4">MediMagic</h3>
-              <p className="text-sm opacity-80">Professional mediation and social work services for complex life transitions.</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Services</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/"><a className="opacity-80 hover:opacity-100">Home</a></Link></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Mediation Services</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Social Work Services</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="tel:0640603592" className="opacity-80 hover:opacity-100">064 060 3592</a></li>
-                <li><a href="mailto:CorneliaGriessel@MediMagic.co.za" className="opacity-80 hover:opacity-100">CorneliaGriessel@MediMagic.co.za</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="opacity-80 hover:opacity-100">Privacy Policy</a></li>
-                <li><a href="#" className="opacity-80 hover:opacity-100">Terms & Conditions</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-background/20 pt-8 text-center text-sm opacity-80">
-            <p>© 2026 MediMagic. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
