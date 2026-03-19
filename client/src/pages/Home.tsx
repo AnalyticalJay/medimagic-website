@@ -77,7 +77,7 @@ export default function Home() {
           </div>
           <div className="hidden md:block relative h-96">
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/hero-transparent-figure-BC2ustRT4KYCNceJzrr4LG.webp" 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/hero-transparent-figure-v2-gQNUbgUGqMAXN2s9kHt8h7.webp" 
               alt="Professional support figure"
               className="w-full h-full object-contain object-right opacity-90"
             />
