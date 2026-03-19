@@ -192,7 +192,7 @@ export default function Home() {
       </section>
 
       {/* Slogan Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-primary/5 to-teal-500/5 border-y-4 border-accent relative overflow-hidden">
+      <section className="py-4 border-y-4 border-accent relative overflow-hidden">
         <div className="absolute top-4 right-8 text-accent/20 text-6xl">✦</div>
         <div className="absolute bottom-4 left-8 text-accent/20 text-5xl">✦</div>
         <div className="container text-center relative z-10">
@@ -203,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* Welcome Section */}
-      <section className="py-16 md:py-24 bg-pattern-mesh">
+      <section className="py-8 bg-pattern-mesh">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Column: Welcome Text */}
@@ -261,11 +261,11 @@ export default function Home() {
       </section>
 
       {/* Mediation Services Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-8 bg-background">
         {/* Section Header Banner */}
         <div className="bg-primary/10 border-l-4 border-accent py-4 mb-12">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-center">
               <span className="text-accent font-bold">Mediation</span> <span className="text-foreground">Services</span>
             </h2>
           </div>
@@ -358,11 +358,11 @@ export default function Home() {
       </section>
 
       {/* Social Work Services Section */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-8 bg-card">
         {/* Section Header Banner */}
         <div className="bg-primary/10 border-l-4 border-accent py-4 mb-12">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-center">
               <span className="text-accent font-bold">Social Work</span> <span className="text-foreground">Services</span>
             </h2>
           </div>
@@ -505,8 +505,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Professional Standards Section */}
-      <section className="py-16 md:py-24 bg-pattern-diagonal">
+      {/* How It Works Section */}
+      <section className="py-8 bg-background pattern-diagonal">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
             Professional Standards You Can Trust
@@ -630,10 +630,8 @@ export default function Home() {
           </button>
         </div>
       </section>
-
       {/* FAQ Section */}
-      <section className="py-20 md:py-32 bg-muted/30">
-        <div className="container">
+      <section className="py-8 bg-background">        <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
