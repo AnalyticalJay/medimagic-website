@@ -79,7 +79,7 @@ export default function Home() {
             <img 
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/medimagic_logo_e9a0b25b.webp" 
               alt="MediMagic Logo"
-              className="w-64 h-64 object-contain opacity-80 drop-shadow-lg"
+              className="w-96 h-96 object-contain opacity-80 drop-shadow-lg"
             />
           </div>
         </div>
