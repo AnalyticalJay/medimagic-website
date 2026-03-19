@@ -52,6 +52,10 @@ export default function AdultDivorcePrep() {
               Divorce is more than a legal process—it's a profound personal transition that affects every aspect of your life. Beyond the practical and financial decisions, divorce involves significant emotional challenges: grief, anger, uncertainty about the future, and questions about identity and self-worth. At MediMagic, our adult divorce preparation services provide emotional and practical support to help you navigate this transition with resilience and clarity.
             </p>
 
+            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/adult-divorce-prep-content-BpiLE6xBKiRVZshSMf7n8w.webp" alt="Emotional support and compassionate care" className="w-full h-auto" />
+            </div>
+
             <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is Adult Divorce Preparation?</h3>
             <p className="text-muted-foreground mb-6">
               Adult divorce preparation is professional social work support designed to help individuals process the emotional dimensions of divorce while preparing for the practical realities of life after separation. It combines emotional support, practical guidance, and coping strategies to help you move forward with confidence and stability.

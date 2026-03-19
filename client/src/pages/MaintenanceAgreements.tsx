@@ -52,6 +52,10 @@ export default function MaintenanceAgreements() {
               Maintenance (also known as alimony or spousal support) is a critical component of many divorce and separation agreements. It addresses the financial support one spouse may provide to the other during or after separation. At MediMagic, we help couples negotiate fair, sustainable maintenance arrangements through structured mediation.
             </p>
 
+            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/maintenance-agreements-content-Z2EK4sgxGvPzyPfoajr8h4.webp" alt="Financial planning and maintenance agreements" className="w-full h-auto" />
+            </div>
+
             <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is Maintenance?</h3>
             <p className="text-muted-foreground mb-6">
               Maintenance is financial support provided by one spouse to another to help maintain a reasonable standard of living after separation or divorce. Unlike child support (which is focused on children's needs), maintenance addresses the financial needs and capacity of each spouse.

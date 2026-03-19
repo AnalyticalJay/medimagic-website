@@ -57,6 +57,10 @@ export default function DivorceSettlement() {
               Divorce is one of life's most significant transitions. Beyond the emotional complexity, there are critical legal and financial decisions that must be made—decisions that will affect your future and that of your children. At MediMagic, we provide structured mediation to help you navigate these decisions with clarity, fairness, and mutual respect.
             </p>
 
+            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/divorce-settlement-content-DmHrPDmfmbWrYivJ4TUKze.webp" alt="Professional divorce mediation" className="w-full h-auto" />
+            </div>
+
             <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is Divorce Settlement Mediation?</h3>
             <p className="text-muted-foreground mb-6">
               Divorce settlement mediation is a structured process in which a neutral, trained mediator helps both spouses communicate effectively and reach agreement on the key issues in their divorce. Rather than adversarial litigation, mediation focuses on collaborative problem-solving—allowing both parties to maintain control over the outcome and preserve dignity throughout the process.

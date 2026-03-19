@@ -52,6 +52,10 @@ export default function HealthEducation() {
               Health literacy—the ability to understand health information and make informed decisions—is fundamental to wellbeing. Yet many people lack access to clear, trustworthy health information or struggle to navigate complex health systems. At MediMagic, our health education and promotion services empower individuals and communities with knowledge, skills, and resources to make informed health decisions and promote wellness.
             </p>
 
+            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/health-education-content-5Hc3Rvq8VXgSZYnGz4XYQH.webp" alt="Health educator with wellness resources" className="w-full h-auto" />
+            </div>
+
             <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is Health Education & Promotion?</h3>
             <p className="text-muted-foreground mb-6">
               Health education and promotion is professional social work support designed to increase health literacy, promote informed decision-making, and support behaviour change that improves health and wellbeing. It combines education, counselling, and resource connection to help individuals and families make informed choices about their health.

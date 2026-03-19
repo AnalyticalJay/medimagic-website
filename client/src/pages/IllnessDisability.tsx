@@ -52,6 +52,10 @@ export default function IllnessDisability() {
               A diagnosis of serious illness or disability can fundamentally change your life and the lives of those around you. Beyond the medical aspects, illness and disability bring emotional, practical, and relational challenges that require compassionate, professional support. At MediMagic, our illness and disability support services help individuals and families navigate these complex transitions with resilience and dignity.
             </p>
 
+            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/illness-disability-content-LYZMPav9drhb22dCT5ncBa.webp" alt="Healthcare professional providing compassionate care" className="w-full h-auto" />
+            </div>
+
             <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is Illness & Disability Support?</h3>
             <p className="text-muted-foreground mb-6">
               Illness and disability support is professional social work guidance designed to help individuals and families adjust to the physical, emotional, social, and practical impacts of illness or disability. It combines emotional support, practical guidance, and resource connection to help you navigate this transition with confidence and hope.

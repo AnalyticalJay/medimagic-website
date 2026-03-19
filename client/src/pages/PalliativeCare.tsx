@@ -52,6 +52,10 @@ export default function PalliativeCare() {
               End-of-life transitions are among the most profound and challenging experiences families face. Whether caring for a loved one with a terminal diagnosis or grieving the loss of someone close, these transitions bring complex emotional, spiritual, practical, and relational challenges. At MediMagic, our palliative and end-of-life care services provide compassionate, professional support to help families navigate this sacred time with dignity, love, and peace.
             </p>
 
+            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/palliative-care-content-kMKPDW7XnLk7CZZp3hyUZV.webp" alt="Peaceful family gathering with dignity and compassion" className="w-full h-auto" />
+            </div>
+
             <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is Palliative & End-of-Life Care Support?</h3>
             <p className="text-muted-foreground mb-6">
               Palliative and end-of-life care support is professional social work guidance designed to help individuals and families navigate the physical, emotional, spiritual, and practical dimensions of end-of-life transitions. It combines emotional support, practical guidance, communication facilitation, and grief support to help families move through this transition with compassion and peace.

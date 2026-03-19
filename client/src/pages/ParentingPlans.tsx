@@ -52,6 +52,10 @@ export default function ParentingPlans() {
               When parents separate or divorce, one of the most important decisions is how to ensure children's wellbeing and maintain meaningful relationships with both parents. At MediMagic, we help parents develop comprehensive parenting plans that prioritise children's needs, stability, and emotional security while allowing both parents to remain actively involved in their children's lives.
             </p>
 
+            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/parenting-plans-content-ndDL2cQPjcT7WTwGPCzJNQ.webp" alt="Happy co-parenting family" className="w-full h-auto" />
+            </div>
+
             <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Is a Parenting Plan?</h3>
             <p className="text-muted-foreground mb-6">
               A parenting plan is a detailed, written agreement that outlines how parents will share responsibilities for their children after separation or divorce. It covers custody arrangements, visitation schedules, decision-making authority, and practical matters affecting the children's daily lives. A well-developed parenting plan provides clarity, reduces conflict, and ensures children's needs are consistently met.

@@ -52,6 +52,10 @@ export default function VoiceOfChild() {
               When parents separate or divorce, children are often affected by decisions made about their futures—yet their voices are rarely heard in the process. At MediMagic, we believe children's perspectives, preferences, and concerns are important and should be considered in mediation. Voice of the Child interviews provide a safe, confidential space for children to express themselves and have their views represented in the mediation process.
             </p>
 
+            <div className="my-12 rounded-lg overflow-hidden shadow-lg">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/voice-of-child-content-2kYjisopVkY6KkiQVGSH2T.webp" alt="Child empowerment and listening" className="w-full h-auto" />
+            </div>
+
             <h3 className="text-2xl font-bold text-foreground mt-12 mb-4">What Are Voice of the Child Interviews?</h3>
             <p className="text-muted-foreground mb-6">
               Voice of the Child interviews are professionally conducted, confidential conversations with children in which they are invited to share their perspectives, feelings, and preferences regarding their family situation. These interviews are facilitated by a trained mediator or social worker who creates a safe, non-judgmental environment where children can express themselves freely.
