@@ -193,9 +193,11 @@ export default function Home() {
               <p className="text-lg text-muted-foreground">
                 We focus on helping individuals move forward with clarity, dignity, and stability through structured, ethical, and client-centred care.
               </p>
-              <button className="cta-button mt-6 inline-flex items-center">
-                Learn About Cornelia <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
+              <Link href="/about">
+                <button className="cta-button mt-6 inline-flex items-center">
+                  Learn About Cornelia <ArrowRight className="ml-2 w-4 h-4" />
+                </button>
+              </Link>
             </div>
             
             {/* Right Column: Key Features with Icons */}
