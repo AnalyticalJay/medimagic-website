@@ -2,6 +2,9 @@ import { Link } from "wouter";
 import { ArrowRight, Check, Zap, Heart, Users, Shield, CheckCircle, Lock, Baby, Award, Menu, X, ChevronDown, Plus, Minus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { useLocation } from "wouter";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { getLoginUrl } from "@/const";
 
 /**
  * Design Philosophy: Humanist Wellness
@@ -12,6 +15,11 @@ import { useState } from "react";
  */
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
+  const [, navigate] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -86,7 +94,10 @@ export default function Home() {
             </div>
             <a href="#how-it-works" className="text-foreground hover:text-accent transition-colors">How It Works</a>
             <a href="#about" className="text-foreground hover:text-accent transition-colors">About</a>
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Button 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+              onClick={() => navigate("/booking")}
+            >
               Get Started
             </Button>
           </div>
@@ -109,7 +120,10 @@ export default function Home() {
               <a href="#services" className="block text-foreground hover:text-accent transition-colors py-2">Services</a>
               <a href="#how-it-works" className="block text-foreground hover:text-accent transition-colors py-2">How It Works</a>
               <a href="#about" className="block text-foreground hover:text-accent transition-colors py-2">About</a>
-              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button 
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                onClick={() => navigate("/booking")}
+              >
                 Get Started
               </Button>
             </div>
@@ -131,7 +145,10 @@ export default function Home() {
               Professional family law mediation and social work services supporting individuals through complex life transitions with structure, fairness, and care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="cta-button-secondary inline-flex items-center justify-center">
+              <button 
+                className="cta-button-secondary inline-flex items-center justify-center"
+                onClick={() => navigate("/booking")}
+              >
                 Explore Services <ArrowRight className="ml-2 w-4 h-4" />
               </button>
               <button className="px-6 py-3 rounded-full font-semibold text-white border-2 border-white hover:bg-white/10 transition-all duration-300">
@@ -180,7 +197,7 @@ export default function Home() {
                 Welcome to MediMagic
               </h2>
               <p className="text-lg text-muted-foreground mb-4">
-                MediMagic is a uniquely integrated practice combining family law mediation and professional social work support. Our approach addresses both the <strong>practical decisions</strong> and the <strong>emotional realities</strong> that arise during conflict, separation, illness, or major life change.
+                MediMagic is a uniquely integrated practice combining family law mediation and professional social work support. Our approach addresses both the <strong className="font-semibold">practical decisions</strong> and the <strong className="font-semibold">emotional realities</strong> that arise during conflict, separation, illness, or major life change.
               </p>
               <p className="text-lg text-muted-foreground">
                 We focus on helping individuals move forward with clarity, dignity, and stability through structured, ethical, and client-centred care.
@@ -565,7 +582,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="pt-6">
-                <button className="cta-button inline-flex items-center">
+                <button 
+                  className="cta-button inline-flex items-center"
+                  onClick={() => navigate("/booking")}
+                >
                   Book Your Consultation <ArrowRight className="ml-2 w-4 h-4" />
                 </button>
               </div>
@@ -587,7 +607,10 @@ export default function Home() {
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Professional support begins with a clear conversation. Contact MediMagic today to request guidance through your situation.
           </p>
-          <button className="cta-button-secondary inline-flex items-center">
+          <button 
+            className="cta-button-secondary inline-flex items-center"
+            onClick={() => navigate("/booking")}
+          >
             Get Started Today <ArrowRight className="ml-2 w-4 h-4" />
           </button>
         </div>
@@ -632,7 +655,10 @@ export default function Home() {
           <div className="text-center mt-12 p-8" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/cta-background-consultation-Luc6yms9wcZAcXsWrkam34.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
             <div className="relative z-10">
               <p className="text-white/90 mb-4 font-semibold text-lg">Still have questions?</p>
-              <button className="cta-button inline-flex items-center">
+              <button 
+                className="cta-button inline-flex items-center"
+                onClick={() => navigate("/booking")}
+              >
                 Contact Us <ArrowRight className="ml-2 w-4 h-4" />
               </button>
             </div>
@@ -676,7 +702,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-background/20 pt-8 text-sm text-center">
-            <p>&copy; 2026 MediMagic. All rights reserved.</p>
+            <p>© 2026 MediMagic. All rights reserved.</p>
           </div>
         </div>
       </footer>
