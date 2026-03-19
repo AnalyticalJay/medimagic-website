@@ -173,7 +173,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/maintenance-agreements">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-maintenance-agreements-enhanced-GP4fajaBjfTswGmGk9NF9u.webp)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/MaintenanceAgreements_7f8f3115.png)'}}>
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
@@ -191,7 +191,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/parenting-plans">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-parenting-plans-enhanced-KGyGM288VnyxiWUoaXvx2t.webp)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/ParentingPLans_3613eb78.png)'}}>
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
@@ -209,7 +209,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/voice-of-child">
-              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/service-voice-of-child-enhanced-KrtpgWcRxYwxWYrDh7Bqvm.webp)'}}>
+              <div className="group cursor-pointer relative h-64 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 bg-cover bg-center" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/Voiceofchildinterviews_3f6329e9.png)'}}>
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/45 transition-all duration-300" />
                 <div className="relative z-10 h-full flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-semibold text-white/80 mb-2">MEDIATION</div>
