@@ -71,20 +71,32 @@ export default function Home() {
             />
           </div>
           <div className="hidden md:flex items-center gap-8">
+            <a href="/" className="text-foreground hover:text-accent transition-colors font-medium">Home</a>
+            
+            {/* Mediation Dropdown */}
             <div className="relative group">
               <button className="flex items-center gap-1 text-foreground hover:text-accent transition-colors">
-                Services
+                Mediation
                 <ChevronDown className="w-4 h-4" />
               </button>
               <div className="absolute left-0 mt-0 w-56 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">Mediation Services</div>
                   <a href="/services/divorce-settlement" className="block px-4 py-2 text-sm text-foreground hover:bg-accent/10 hover:text-accent transition-colors">Divorce Settlement Agreements</a>
                   <a href="/services/maintenance-agreements" className="block px-4 py-2 text-sm text-foreground hover:bg-accent/10 hover:text-accent transition-colors">Maintenance Agreements</a>
                   <a href="/services/parenting-plans" className="block px-4 py-2 text-sm text-foreground hover:bg-accent/10 hover:text-accent transition-colors">Parenting Plans</a>
                   <a href="/services/voice-of-child" className="block px-4 py-2 text-sm text-foreground hover:bg-accent/10 hover:text-accent transition-colors">Voice of the Child</a>
-                  <div className="border-t border-border my-2"></div>
-                  <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">Social Work Services</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Social Work Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-foreground hover:text-accent transition-colors">
+                Social Work
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute left-0 mt-0 w-56 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
                   <a href="/services/adult-divorce-preparation" className="block px-4 py-2 text-sm text-foreground hover:bg-accent/10 hover:text-accent transition-colors">Adult Divorce Preparation</a>
                   <a href="/services/illness-disability" className="block px-4 py-2 text-sm text-foreground hover:bg-accent/10 hover:text-accent transition-colors">Illness & Disability Support</a>
                   <a href="/services/palliative-care" className="block px-4 py-2 text-sm text-foreground hover:bg-accent/10 hover:text-accent transition-colors">Palliative & End-of-Life Care</a>
@@ -92,8 +104,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <a href="#how-it-works" className="text-foreground hover:text-accent transition-colors">How It Works</a>
-            <a href="#about" className="text-foreground hover:text-accent transition-colors">About</a>
+            
+            <a href="/contact" className="text-foreground hover:text-accent transition-colors">Contact</a>
             <Button 
               className="bg-accent hover:bg-accent/90 text-accent-foreground"
               onClick={() => navigate("/booking")}
@@ -117,9 +129,10 @@ export default function Home() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-background border-t border-border">
             <div className="container py-4 space-y-3">
-              <a href="#services" className="block text-foreground hover:text-accent transition-colors py-2">Services</a>
-              <a href="#how-it-works" className="block text-foreground hover:text-accent transition-colors py-2">How It Works</a>
-              <a href="#about" className="block text-foreground hover:text-accent transition-colors py-2">About</a>
+                <a href="/" className="block text-foreground hover:text-accent transition-colors py-2">Home</a>
+              <a href="/services/divorce-settlement" className="block text-foreground hover:text-accent transition-colors py-2 pl-4">Mediation Services</a>
+              <a href="/services/adult-divorce-preparation" className="block text-foreground hover:text-accent transition-colors py-2 pl-4">Social Work Services</a>
+              <a href="/contact" className="block text-foreground hover:text-accent transition-colors py-2">Contact</a>
               <Button 
                 className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
                 onClick={() => navigate("/booking")}
