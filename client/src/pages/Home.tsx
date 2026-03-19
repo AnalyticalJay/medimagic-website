@@ -126,7 +126,7 @@ export default function Home() {
             backgroundBlendMode: 'overlay'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-teal-600/75 to-teal-500/30" />
+
         <div className="container relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
