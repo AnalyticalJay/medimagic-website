@@ -44,3 +44,16 @@ export const bookings = mysqlTable("bookings", {
 
 export type Booking = typeof bookings.$inferSelect;
 export type InsertBooking = typeof bookings.$inferInsert;
+
+// Availability management table for managing consultation slots
+export const availability = mysqlTable("availability", {
+  id: int("id").autoincrement().primaryKey(),
+  date: varchar("date", { length: 255 }).notNull(),
+  timeSlot: varchar("timeSlot", { length: 255 }).notNull(),
+  isAvailable: int("isAvailable").default(1).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Availability = typeof availability.$inferSelect;
+export type InsertAvailability = typeof availability.$inferInsert;

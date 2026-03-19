@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { eq, and, gte, lte } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, bookings, InsertBooking } from "../drizzle/schema";
+import { InsertUser, users, bookings, InsertBooking, availability } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -117,4 +117,72 @@ export async function getBookingById(id: number) {
 
   const result = await db.select().from(bookings).where(eq(bookings.id, id)).limit(1);
   return result.length > 0 ? result[0] : undefined;
+}
+
+// Admin booking management queries
+export async function updateBookingStatus(id: number, status: "pending" | "confirmed" | "completed" | "cancelled") {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.update(bookings).set({ status }).where(eq(bookings.id, id));
+  return result;
+}
+
+export async function getBookingsByDateRange(startDate: string, endDate: string) {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(bookings)
+    .where(and(
+      gte(bookings.preferredDate, startDate),
+      lte(bookings.preferredDate, endDate)
+    ));
+}
+
+export async function getBookingsByService(serviceType: string) {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(bookings).where(eq(bookings.serviceType, serviceType));
+}
+
+// Availability management queries
+export async function getAvailability(date?: string) {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  if (date) {
+    return await db.select().from(availability).where(eq(availability.date, date));
+  }
+  return await db.select().from(availability);
+}
+
+export async function setAvailability(date: string, timeSlot: string, isAvailable: boolean) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const existing = await db.select().from(availability)
+    .where(and(eq(availability.date, date), eq(availability.timeSlot, timeSlot)));
+
+  if (existing.length > 0) {
+    return await db.update(availability)
+      .set({ isAvailable: isAvailable ? 1 : 0 })
+      .where(and(eq(availability.date, date), eq(availability.timeSlot, timeSlot)));
+  } else {
+    return await db.insert(availability).values({
+      date,
+      timeSlot,
+      isAvailable: isAvailable ? 1 : 0,
+    });
+  }
 }

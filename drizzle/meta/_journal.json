@@ -15,6 +15,13 @@
       "when": 1773911433632,
       "tag": "0001_glossy_true_believers",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1773913365916,
+      "tag": "0002_noisy_black_widow",
+      "breakpoints": true
     }
   ]
 }
