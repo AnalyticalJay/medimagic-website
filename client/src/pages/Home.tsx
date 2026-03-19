@@ -102,9 +102,9 @@ export default function Home() {
           </div>
           <div className="hidden md:flex items-center justify-center relative h-96">
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/medimagic_logo_e9a0b25b.webp" 
-              alt="MediMagic Logo"
-              className="w-96 h-96 object-contain opacity-80 drop-shadow-lg"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/hero-hand-star-3d-kBV9ahX5pGQNbHWcXn2DaV.webp" 
+              alt="Hand Holding Star - Transformation"
+              className="w-full h-full object-contain drop-shadow-2xl"
             />
           </div>
         </div>
