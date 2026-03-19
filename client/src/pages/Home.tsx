@@ -179,16 +179,61 @@ export default function Home() {
       </section>
 
       {/* Welcome Section */}
-      <section className="py-16 md:py-24 bg-pattern-mesh">   <div className="container max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Welcome to MediMagic
-          </h2>
-          <p className="text-lg text-muted-foreground mb-4">
-            MediMagic is a uniquely integrated practice combining family law mediation and professional social work support. Our approach addresses both the <strong>practical decisions</strong> and the <strong>emotional realities</strong> that arise during conflict, separation, illness, or major life change.
-          </p>
-          <p className="text-lg text-muted-foreground">
-            We focus on helping individuals move forward with clarity, dignity, and stability through structured, ethical, and client-centred care.
-          </p>
+      <section className="py-16 md:py-24 bg-pattern-mesh">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Welcome Text */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Welcome to MediMagic
+              </h2>
+              <p className="text-lg text-muted-foreground mb-4">
+                MediMagic is a uniquely integrated practice combining family law mediation and professional social work support. Our approach addresses both the <strong>practical decisions</strong> and the <strong>emotional realities</strong> that arise during conflict, separation, illness, or major life change.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                We focus on helping individuals move forward with clarity, dignity, and stability through structured, ethical, and client-centred care.
+              </p>
+            </div>
+            
+            {/* Right Column: Key Features with Icons */}
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-accent/20">
+                    <Shield className="w-6 h-6 text-accent" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Confidential & Safe</h3>
+                  <p className="text-muted-foreground">All sessions are conducted with strict confidentiality and professional ethics.</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-accent/20">
+                    <Heart className="w-6 h-6 text-accent" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Emotionally Intelligent</h3>
+                  <p className="text-muted-foreground">We address both practical decisions and emotional wellbeing throughout your journey.</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-accent/20">
+                    <Award className="w-6 h-6 text-accent" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Highly Qualified</h3>
+                  <p className="text-muted-foreground">FAMAC Accredited Mediator and SASW Registered Social Worker with 20+ years experience.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -197,14 +242,14 @@ export default function Home() {
         {/* Section Header Banner */}
         <div className="bg-primary/10 border-l-4 border-accent py-4 mb-12">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold">
+            <h2 className="text-2xl md:text-3xl font-bold text-center">
               <span className="text-accent font-bold">Mediation</span> <span className="text-foreground">Services</span>
             </h2>
           </div>
         </div>
         <div className="container">
-          <div className="mb-12">
-            <p className="text-lg text-muted-foreground max-w-2xl">
+          <div className="mb-12 text-center">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Structured Solutions for Complex Disputes. Mediation offers a practical, confidential, and future-focused alternative to litigation. At MediMagic, mediation is approached with structure, neutrality, and a clear focus on resolution.
             </p>
           </div>
@@ -294,14 +339,14 @@ export default function Home() {
         {/* Section Header Banner */}
         <div className="bg-primary/10 border-l-4 border-accent py-4 mb-12">
           <div className="container">
-            <h2 className="text-2xl md:text-3xl font-bold">
+            <h2 className="text-2xl md:text-3xl font-bold text-center">
               <span className="text-accent font-bold">Social Work</span> <span className="text-foreground">Services</span>
             </h2>
           </div>
         </div>
         <div className="container">
-          <div className="mb-12">
-            <p className="text-lg text-muted-foreground max-w-2xl">
+          <div className="mb-12 text-center">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Supporting Stability Through Life Transitions. Social work services at MediMagic focus on emotional stability, resilience, and practical support during periods of change, illness, or conflict.
             </p>
           </div>
