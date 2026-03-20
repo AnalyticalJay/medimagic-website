@@ -191,3 +191,32 @@ export async function setAvailability(date: string, timeSlot: string, isAvailabl
     });
   }
 }
+
+// Client booking queries
+export async function getClientBookings(email: string) {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(bookings).where(eq(bookings.email, email));
+}
+
+export async function updateBookingDetails(id: number, updates: { preferredDate?: string; preferredTime?: string; message?: string }) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const updateData: Record<string, unknown> = {};
+  if (updates.preferredDate) updateData.preferredDate = updates.preferredDate;
+  if (updates.preferredTime) updateData.preferredTime = updates.preferredTime;
+  if (updates.message) updateData.message = updates.message;
+
+  if (Object.keys(updateData).length === 0) {
+    throw new Error("No updates provided");
+  }
+
+  const result = await db.update(bookings).set(updateData).where(eq(bookings.id, id));
+  return result;
+}

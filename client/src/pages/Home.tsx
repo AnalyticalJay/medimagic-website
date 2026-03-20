@@ -118,6 +118,14 @@ export default function Home() {
                     Admin Dashboard
                   </Button>
                 )}
+                {user?.role !== "admin" && (
+                  <Button 
+                    variant="outline"
+                    onClick={() => navigate("/client/dashboard")}
+                  >
+                    My Bookings
+                  </Button>
+                )}
                 <Button 
                   variant="outline"
                   onClick={() => logout()}
@@ -173,6 +181,15 @@ export default function Home() {
                       onClick={() => navigate("/admin/dashboard")}
                     >
                       Admin Dashboard
+                    </Button>
+                  )}
+                  {user?.role !== "admin" && (
+                    <Button 
+                      variant="outline"
+                      className="w-full mb-2"
+                      onClick={() => navigate("/client/dashboard")}
+                    >
+                      My Bookings
                     </Button>
                   )}
                   <Button 

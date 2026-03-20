@@ -276,3 +276,16 @@ Or use the Management UI → Database panel to update the role field directly.
 - [x] Test admin access to /admin/dashboard
 - [x] Verify email notifications work with admin account
 - [x] All 38 tests passing (10 email + 7 booking + 20 admin + 1 auth)
+
+
+## Completed - Client Portal Dashboard
+
+- [x] Create tRPC procedures for client booking queries (getClientBookings, updateBookingDetails)
+- [x] Build ClientDashboard component with booking list and filters
+- [x] Implement reschedule modal with date/time picker
+- [x] Add reschedule functionality to update booking details
+- [x] Add client portal route (/client/dashboard)
+- [x] Add "My Bookings" link to navigation for authenticated clients (desktop & mobile)
+- [x] Write tests for client portal features (14 tests covering all scenarios)
+- [x] Test booking history display and reschedule workflow
+- [x] All 52 tests passing (14 client portal + 10 email + 7 booking + 20 admin + 1 auth)

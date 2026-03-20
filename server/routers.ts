@@ -2,7 +2,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { COOKIE_NAME } from "@shared/const";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router, adminProcedure } from "./_core/trpc";
-import { createBooking, getBookings, updateBookingStatus, getBookingsByDateRange, getBookingsByService, getAvailability, setAvailability } from "./db";
+import { createBooking, getBookings, updateBookingStatus, getBookingsByDateRange, getBookingsByService, getAvailability, setAvailability, getClientBookings, updateBookingDetails } from "./db";
 import { sendBookingConfirmationEmail, sendAdminNotificationEmail, sendStatusUpdateEmail } from "./email";
 import { z } from "zod";
 
@@ -154,6 +154,41 @@ export const appRouter = router({
       .mutation(async ({ input }) => {
         await setAvailability(input.date, input.timeSlot, input.isAvailable);
         return { success: true, message: "Availability updated" };
+      }),
+  }),
+
+  clientPortal: router({
+    getBookings: publicProcedure
+      .query(async ({ ctx }) => {
+        if (!ctx.user?.email) {
+          return [];
+        }
+        return await getClientBookings(ctx.user.email);
+      }),
+    reschedule: publicProcedure
+      .input(
+        z.object({
+          bookingId: z.number(),
+          preferredDate: z.string(),
+          preferredTime: z.string(),
+          message: z.string().optional(),
+        })
+      )
+      .mutation(async ({ input, ctx }) => {
+        const allBookings = await getBookings();
+        const userBooking = allBookings.find((b) => b.id === input.bookingId && b.email === ctx.user?.email);
+
+        if (!userBooking) {
+          throw new Error("Booking not found or unauthorized");
+        }
+
+        await updateBookingDetails(input.bookingId, {
+          preferredDate: input.preferredDate,
+          preferredTime: input.preferredTime,
+          message: input.message,
+        });
+
+        return { success: true, message: "Booking rescheduled successfully" };
       }),
   }),
 });
