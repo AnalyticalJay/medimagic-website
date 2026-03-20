@@ -1,8 +1,9 @@
 import { getSessionCookieOptions } from "./_core/cookies";
-import { COOKIE_NAME } from "../shared/const";
+import { COOKIE_NAME } from "@shared/const";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router, adminProcedure } from "./_core/trpc";
 import { createBooking, getBookings, updateBookingStatus, getBookingsByDateRange, getBookingsByService, getAvailability, setAvailability } from "./db";
+import { sendBookingConfirmationEmail, sendAdminNotificationEmail, sendStatusUpdateEmail } from "./email";
 import { z } from "zod";
 
 export const appRouter = router({
@@ -44,6 +45,39 @@ export const appRouter = router({
           preferredTime: input.preferredTime,
           message: input.message,
         });
+
+        // Send confirmation email to client
+        try {
+          await sendBookingConfirmationEmail(input.email, input.name, {
+            serviceType: input.serviceType,
+            consultationType: input.consultationType,
+            preferredDate: input.preferredDate,
+            preferredTime: input.preferredTime,
+            bookingId: result.id.toString(),
+          });
+        } catch (error) {
+          console.error("Failed to send client confirmation email:", error);
+          // Don't fail the booking creation if email fails
+        }
+
+        // Send admin notification email
+        try {
+          await sendAdminNotificationEmail({
+            bookingId: result.id.toString(),
+            clientName: input.name,
+            clientEmail: input.email,
+            clientPhone: input.phone,
+            serviceType: input.serviceType,
+            consultationType: input.consultationType,
+            preferredDate: input.preferredDate,
+            preferredTime: input.preferredTime,
+            notes: input.message,
+          });
+        } catch (error) {
+          console.error("Failed to send admin notification email:", error);
+          // Don't fail the booking creation if email fails
+        }
+
         return { success: true, message: "Booking created successfully" };
       }),
     list: publicProcedure.query(async () => {
@@ -58,7 +92,32 @@ export const appRouter = router({
         })
       )
       .mutation(async ({ input }) => {
+        // Get booking details before updating
+        const bookings = await getBookings();
+        const booking = bookings.find((b) => b.id === input.bookingId);
+
         await updateBookingStatus(input.bookingId, input.status);
+
+        // Send status update email to client if booking found and status is not pending
+        if (booking && input.status !== "pending") {
+          try {
+            await sendStatusUpdateEmail(
+              booking.email,
+              booking.name,
+              input.status,
+              {
+                serviceType: booking.serviceType,
+                preferredDate: booking.preferredDate,
+                preferredTime: booking.preferredTime,
+                bookingId: booking.id.toString(),
+              }
+            );
+          } catch (error) {
+            console.error("Failed to send status update email:", error);
+            // Don't fail the status update if email fails
+          }
+        }
+
         return { success: true, message: "Booking status updated" };
       }),
     getByDateRange: adminProcedure

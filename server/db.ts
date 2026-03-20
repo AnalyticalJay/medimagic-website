@@ -96,8 +96,13 @@ export async function createBooking(booking: InsertBooking) {
     throw new Error("Database not available");
   }
 
-  const result = await db.insert(bookings).values(booking);
-  return result;
+  await db.insert(bookings).values(booking);
+  // Get the last inserted booking
+  const insertedBooking = await db.select().from(bookings).orderBy((t) => t.id).limit(1);
+  if (!insertedBooking[0]) {
+    throw new Error("Failed to retrieve inserted booking");
+  }
+  return insertedBooking[0];
 }
 
 export async function getBookings(limit: number = 50) {
