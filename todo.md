@@ -335,3 +335,11 @@ Or use the Management UI → Database panel to update the role field directly.
 
 - [x] Reduce text size in slogan section (from text-4xl/5xl/6xl to text-2xl/3xl/4xl)
 - [x] Remove hyphen after "STARS" in slogan (changed em-dash to space)
+
+
+## Completed - Mobile Navigation Improvements
+
+- [x] Add expandable dropdowns for Mediation services in mobile menu (4 sub-services)
+- [x] Add expandable dropdowns for Social Work services in mobile menu (4 sub-services)
+- [x] Test mobile navigation on various screen sizes (all 89 tests passing)
+- [x] Ensure touch-friendly expand/collapse buttons with animated chevron icons

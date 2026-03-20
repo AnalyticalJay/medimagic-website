@@ -168,8 +168,45 @@ export default function Home() {
             <div className="container py-4 space-y-3">
                 <a href="/" className="block text-foreground hover:text-accent transition-colors py-2">Home</a>
               <a href="/about" className="block text-foreground hover:text-accent transition-colors py-2">About</a>
-              <a href="/services/divorce-settlement" className="block text-foreground hover:text-accent transition-colors py-2 pl-4">Mediation Services</a>
-              <a href="/services/adult-divorce-preparation" className="block text-foreground hover:text-accent transition-colors py-2 pl-4">Social Work Services</a>
+              
+              {/* Mediation Dropdown */}
+              <div>
+                <button 
+                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                  className="flex items-center gap-2 w-full text-foreground hover:text-accent transition-colors py-2"
+                >
+                  Mediation
+                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {servicesDropdownOpen && (
+                  <div className="pl-4 space-y-2 py-2">
+                    <a href="/services/divorce-settlement" className="block text-sm text-foreground hover:text-accent transition-colors py-1">Divorce Settlement Agreements</a>
+                    <a href="/services/maintenance-agreements" className="block text-sm text-foreground hover:text-accent transition-colors py-1">Maintenance Agreements</a>
+                    <a href="/services/parenting-plans" className="block text-sm text-foreground hover:text-accent transition-colors py-1">Parenting Plans</a>
+                    <a href="/services/voice-of-child" className="block text-sm text-foreground hover:text-accent transition-colors py-1">Voice of the Child</a>
+                  </div>
+                )}
+              </div>
+              
+              {/* Social Work Dropdown */}
+              <div>
+                <button 
+                  onClick={() => setOpenFaqIndex(openFaqIndex === -1 ? null : -1)}
+                  className="flex items-center gap-2 w-full text-foreground hover:text-accent transition-colors py-2"
+                >
+                  Social Work
+                  <ChevronDown className={`w-4 h-4 transition-transform ${openFaqIndex === -1 ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaqIndex === -1 && (
+                  <div className="pl-4 space-y-2 py-2">
+                    <a href="/services/adult-divorce-preparation" className="block text-sm text-foreground hover:text-accent transition-colors py-1">Adult Divorce Preparation</a>
+                    <a href="/services/illness-disability" className="block text-sm text-foreground hover:text-accent transition-colors py-1">Illness & Disability Support</a>
+                    <a href="/services/palliative-care" className="block text-sm text-foreground hover:text-accent transition-colors py-1">Palliative & End-of-Life Care</a>
+                    <a href="/services/health-education" className="block text-sm text-foreground hover:text-accent transition-colors py-1">Health Education & Promotion</a>
+                  </div>
+                )}
+              </div>
+              
               <a href="/contact" className="block text-foreground hover:text-accent transition-colors py-2">Contact</a>
               {isAuthenticated ? (
                 <>
