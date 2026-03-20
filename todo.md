@@ -266,3 +266,13 @@ Or use the Management UI → Database panel to update the role field directly.
 - [x] Test email delivery and formatting
 - [x] Write vitest tests for email functionality (10 tests passing)
 - [x] All 38 tests passing (email + booking + admin + auth tests)
+
+
+## Completed - Admin Authentication Setup
+
+- [x] Add login/logout buttons to navigation menu (desktop & mobile)
+- [x] Create Cornelia admin user in database with email cornelia.griessel@medimagic.co.za
+- [x] Set Cornelia's role to 'admin' in database
+- [x] Test admin access to /admin/dashboard
+- [x] Verify email notifications work with admin account
+- [x] All 38 tests passing (10 email + 7 booking + 20 admin + 1 auth)

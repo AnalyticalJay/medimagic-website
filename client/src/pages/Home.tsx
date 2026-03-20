@@ -107,12 +107,40 @@ export default function Home() {
             </div>
             
             <a href="/contact" className="text-foreground hover:text-accent transition-colors">Contact</a>
-            <Button 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground"
-              onClick={() => navigate("/booking")}
-            >
-              Get Started
-            </Button>
+            {isAuthenticated ? (
+              <>
+                <span className="text-sm text-muted-foreground">Welcome, {user?.name}</span>
+                {user?.role === "admin" && (
+                  <Button 
+                    variant="outline"
+                    onClick={() => navigate("/admin/dashboard")}
+                  >
+                    Admin Dashboard
+                  </Button>
+                )}
+                <Button 
+                  variant="outline"
+                  onClick={() => logout()}
+                >
+                  Logout
+                </Button>
+              </>
+            ) : (
+              <Button 
+                className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                onClick={() => window.location.href = getLoginUrl()}
+              >
+                Login
+              </Button>
+            )}
+            {!isAuthenticated && (
+              <Button 
+                className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                onClick={() => navigate("/booking")}
+              >
+                Get Started
+              </Button>
+            )}
           </div>
           <button 
             className="md:hidden p-2"
@@ -135,12 +163,42 @@ export default function Home() {
               <a href="/services/divorce-settlement" className="block text-foreground hover:text-accent transition-colors py-2 pl-4">Mediation Services</a>
               <a href="/services/adult-divorce-preparation" className="block text-foreground hover:text-accent transition-colors py-2 pl-4">Social Work Services</a>
               <a href="/contact" className="block text-foreground hover:text-accent transition-colors py-2">Contact</a>
-              <Button 
-                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
-                onClick={() => navigate("/booking")}
-              >
-                Get Started
-              </Button>
+              {isAuthenticated ? (
+                <>
+                  <div className="text-sm text-muted-foreground py-2">Welcome, {user?.name}</div>
+                  {user?.role === "admin" && (
+                    <Button 
+                      variant="outline"
+                      className="w-full mb-2"
+                      onClick={() => navigate("/admin/dashboard")}
+                    >
+                      Admin Dashboard
+                    </Button>
+                  )}
+                  <Button 
+                    variant="outline"
+                    className="w-full mb-2"
+                    onClick={() => logout()}
+                  >
+                    Logout
+                  </Button>
+                </>
+              ) : (
+                <Button 
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground mb-2"
+                  onClick={() => window.location.href = getLoginUrl()}
+                >
+                  Login
+                </Button>
+              )}
+              {!isAuthenticated && (
+                <Button 
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                  onClick={() => navigate("/booking")}
+                >
+                  Get Started
+                </Button>
+              )}
             </div>
           </div>
         )}
