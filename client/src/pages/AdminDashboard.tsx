@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Filter, RefreshCw, Settings } from "lucide-react";
 import AvailabilityManager from "@/components/AvailabilityManager";
+import { ComingSoonToggle } from "@/components/ComingSoonToggle";
 
 const SERVICE_TYPES = [
   "Divorce Settlement Agreements",
@@ -36,6 +37,7 @@ export default function AdminDashboard() {
   const [selectedBookingId, setSelectedBookingId] = useState<number | null>(null);
   const [newStatus, setNewStatus] = useState<string>("");
   const [showAvailabilityManager, setShowAvailabilityManager] = useState(false);
+  const [showComingSoonSettings, setShowComingSoonSettings] = useState(false);
 
   // Queries
   const { data: allBookings, isLoading: loadingBookings, refetch } = trpc.booking.list.useQuery();
@@ -95,6 +97,13 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-background py-8">
       <div className="container max-w-6xl">
         <h1 className="text-4xl font-bold text-foreground mb-8">Admin Dashboard</h1>
+
+        {/* Coming Soon Settings Section */}
+        {showComingSoonSettings && (
+          <div className="mb-8">
+            <ComingSoonToggle />
+          </div>
+        )}
 
         {/* Availability Manager Section */}
         {showAvailabilityManager && (
@@ -188,6 +197,14 @@ export default function AdminDashboard() {
               variant="ghost"
             >
               Clear Filters
+            </Button>
+            <Button
+              onClick={() => setShowComingSoonSettings(!showComingSoonSettings)}
+              variant="outline"
+              className="flex items-center gap-2"
+            >
+              <Settings className="w-4 h-4" />
+              {showComingSoonSettings ? "Hide" : "Show"} Coming Soon
             </Button>
             <Button
               onClick={() => setShowAvailabilityManager(!showAvailabilityManager)}

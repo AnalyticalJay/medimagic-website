@@ -343,3 +343,14 @@ Or use the Management UI → Database panel to update the role field directly.
 - [x] Add expandable dropdowns for Social Work services in mobile menu (4 sub-services)
 - [x] Test mobile navigation on various screen sizes (all 89 tests passing)
 - [x] Ensure touch-friendly expand/collapse buttons with animated chevron icons
+
+
+## Completed - Coming Soon Landing Page
+
+- [x] Create beautiful Coming Soon landing page component with hero background (same as home hero)
+- [x] Add feature flag to toggle between Coming Soon and full website (localStorage-based)
+- [x] Implement preview access for authorized users via ?preview=true URL parameter
+- [x] Add email notification signup to Coming Soon page
+- [x] Test Coming Soon page display and preview access
+- [x] Add Coming Soon toggle controls to admin dashboard
+- [x] All 89 tests passing - no functionality broken

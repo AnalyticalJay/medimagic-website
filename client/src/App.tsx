@@ -6,6 +6,7 @@ import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import ComingSoon from "./pages/ComingSoon";
 import About from "./pages/About";
 import Booking from "./pages/Booking";
 import DivorceSettlement from "./pages/DivorceSettlement";
@@ -23,11 +24,20 @@ import Showcase from "./pages/Showcase";
 
 function Router() {
   const [location] = useLocation();
+  const searchParams = new URLSearchParams(location.split('?')[1] || '');
+  const isPreviewMode = searchParams.get('preview') === 'true';
+  const isComingSoonMode = localStorage.getItem('comingSoonMode') === 'true';
+  const showComingSoon = isComingSoonMode && !isPreviewMode;
 
   // Scroll to top when route changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  // Show Coming Soon page for all routes except preview and admin
+  if (showComingSoon && !location.startsWith('/admin') && !location.startsWith('/client')) {
+    return <ComingSoon />;
+  }
 
   // make sure to consider if you need authentication for certain routes
   return (
