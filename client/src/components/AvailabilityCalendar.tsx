@@ -75,39 +75,41 @@ export default function AvailabilityCalendar({
   const monthName = displayMonth.toLocaleString("default", { month: "long", year: "numeric" });
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 md:space-y-6">
       {/* Calendar */}
-      <Card className="p-6">
-        <h3 className="text-lg font-semibold text-foreground mb-4">Select Date</h3>
+      <Card className="p-3 md:p-6">
+        <h3 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4">Select Date</h3>
 
         {/* Month Navigation */}
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-3 md:mb-4 gap-2">
           <button
             onClick={handlePrevMonth}
-            className="p-2 hover:bg-muted rounded-lg transition-colors"
+            className="p-1.5 md:p-2 hover:bg-muted rounded-lg transition-colors active:bg-muted/70 touch-manipulation"
+            aria-label="Previous month"
           >
-            <ChevronLeft className="w-5 h-5 text-foreground" />
+            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-foreground" />
           </button>
-          <h4 className="text-base font-medium text-foreground">{monthName}</h4>
+          <h4 className="text-sm md:text-base font-medium text-foreground flex-1 text-center">{monthName}</h4>
           <button
             onClick={handleNextMonth}
-            className="p-2 hover:bg-muted rounded-lg transition-colors"
+            className="p-1.5 md:p-2 hover:bg-muted rounded-lg transition-colors active:bg-muted/70 touch-manipulation"
+            aria-label="Next month"
           >
-            <ChevronRight className="w-5 h-5 text-foreground" />
+            <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-foreground" />
           </button>
         </div>
 
         {/* Day Headers */}
-        <div className="grid grid-cols-7 gap-2 mb-2">
-          {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
-            <div key={day} className="text-center text-xs font-semibold text-muted-foreground py-2">
+        <div className="grid grid-cols-7 gap-1 md:gap-2 mb-2">
+          {["S", "M", "T", "W", "T", "F", "S"].map((day) => (
+            <div key={day} className="text-center text-xs md:text-sm font-semibold text-muted-foreground py-1 md:py-2">
               {day}
             </div>
           ))}
         </div>
 
         {/* Calendar Days */}
-        <div className="grid grid-cols-7 gap-2">
+        <div className="grid grid-cols-7 gap-1 md:gap-2">
           {calendarDays.map((date, idx) => {
             if (!date) {
               return <div key={`empty-${idx}`} />;
@@ -122,12 +124,13 @@ export default function AvailabilityCalendar({
                 onClick={() => !isPast && handleDateClick(date)}
                 disabled={isPast}
                 className={`
-                  p-2 rounded-lg text-sm font-medium transition-colors
+                  p-1.5 md:p-2 rounded-lg text-xs md:text-sm font-medium transition-colors
+                  active:scale-95 touch-manipulation
                   ${isPast
                     ? "bg-muted text-muted-foreground cursor-not-allowed opacity-50"
                     : isSelected
-                    ? "bg-accent text-accent-foreground"
-                    : "bg-background border border-border text-foreground hover:bg-muted"
+                    ? "bg-accent text-accent-foreground font-bold"
+                    : "bg-background border border-border text-foreground hover:bg-muted active:bg-muted"
                   }
                 `}
               >
@@ -140,37 +143,38 @@ export default function AvailabilityCalendar({
 
       {/* Time Slots */}
       {selectedDate && (
-        <Card className="p-6">
-          <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-            <Clock className="w-5 h-5" />
+        <Card className="p-3 md:p-6">
+          <h3 className="text-base md:text-lg font-semibold text-foreground mb-3 md:mb-4 flex items-center gap-2">
+            <Clock className="w-4 h-4 md:w-5 md:h-5" />
             Available Times
           </h3>
 
           {slotsLoading ? (
-            <div className="text-center py-8">
-              <p className="text-muted-foreground">Loading available times...</p>
+            <div className="text-center py-6 md:py-8">
+              <p className="text-sm md:text-base text-muted-foreground">Loading available times...</p>
             </div>
           ) : availableSlots.length === 0 ? (
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 md:p-4 flex items-start gap-2 md:gap-3">
+              <AlertCircle className="w-4 h-4 md:w-5 md:h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-medium text-yellow-900">No availability</p>
-                <p className="text-sm text-yellow-800">
+                <p className="text-xs md:text-sm font-medium text-yellow-900">No availability</p>
+                <p className="text-xs md:text-sm text-yellow-800 mt-1">
                   No available time slots for {new Date(selectedDate).toLocaleDateString()}. Please choose another date.
                 </p>
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
               {availableSlots.map((slot) => (
                 <button
                   key={slot.timeSlot}
                   onClick={() => onTimeChange(slot.timeSlot)}
                   className={`
-                    p-3 rounded-lg text-sm font-medium transition-colors
+                    p-2 md:p-3 rounded-lg text-xs md:text-sm font-medium transition-colors
+                    active:scale-95 touch-manipulation
                     ${selectedTime === slot.timeSlot
-                      ? "bg-accent text-accent-foreground"
-                      : "bg-background border border-border text-foreground hover:bg-muted"
+                      ? "bg-accent text-accent-foreground font-bold"
+                      : "bg-background border border-border text-foreground hover:bg-muted active:bg-muted"
                     }
                   `}
                 >
@@ -181,8 +185,8 @@ export default function AvailabilityCalendar({
           )}
 
           {selectedDate && selectedTime && (
-            <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
-              <p className="text-sm text-green-900">
+            <div className="mt-3 md:mt-4 p-2 md:p-3 bg-green-50 border border-green-200 rounded-lg">
+              <p className="text-xs md:text-sm text-green-900">
                 <span className="font-medium">Selected:</span> {new Date(selectedDate).toLocaleDateString()} at {selectedTime}
               </p>
             </div>
