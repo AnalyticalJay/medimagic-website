@@ -271,8 +271,8 @@ export default function Home() {
         <div className="absolute top-8 right-8 text-accent/30 text-8xl animate-text-pulse" style={{color: '#086867', backgroundColor: '#ffffff'}}></div>
         <div className="absolute bottom-8 left-8 text-accent/30 text-7xl animate-text-pulse" style={{animationDelay: '0.5s', color: '#407fa5'}}>✦</div>
         <div className="container text-center relative z-10">
-          <p className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight" style={{color: '#171717'}}>
-            Changing <span className="animate-text-glow text-accent font-black">SCARS</span> into <span className="animate-text-glow text-accent font-black" style={{animationDelay: '0.5s'}}>STARS</span> — One <span className="animate-text-glow text-accent font-black" style={{animationDelay: '1s'}}>BATTLE</span> at a time
+          <p className="text-2xl md:text-3xl lg:text-4xl font-black tracking-tight" style={{color: '#171717'}}>
+            Changing <span className="animate-text-glow text-accent font-black">SCARS</span> into <span className="animate-text-glow text-accent font-black" style={{animationDelay: '0.5s'}}>STARS</span> One <span className="animate-text-glow text-accent font-black" style={{animationDelay: '1s'}}>BATTLE</span> at a time
           </p>
         </div>
       </section>
