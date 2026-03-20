@@ -138,6 +138,31 @@ export const appRouter = router({
   }),
 
   availability: router({
+    getPublic: publicProcedure
+      .input(z.object({ date: z.string() }))
+      .query(async ({ input }) => {
+        return await getAvailability(input.date);
+      }),
+    getAvailableSlots: publicProcedure
+      .input(z.object({ date: z.string() }))
+      .query(async ({ input }) => {
+        const availability = await getAvailability(input.date);
+        const bookings = await getBookingsByDateRange(input.date, input.date);
+
+        const availableSlots = availability.filter(slot => {
+          const isBooked = bookings.some(booking =>
+            booking.preferredDate === input.date &&
+            booking.preferredTime === slot.timeSlot &&
+            booking.status !== "cancelled"
+          );
+          return slot.isAvailable === 1 && !isBooked;
+        });
+
+        return availableSlots.map(slot => ({
+          timeSlot: slot.timeSlot,
+          isAvailable: slot.isAvailable === 1,
+        }));
+      }),
     get: adminProcedure
       .input(z.object({ date: z.string().optional() }).optional())
       .query(async ({ input }) => {

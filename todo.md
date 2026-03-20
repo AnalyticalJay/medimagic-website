@@ -289,3 +289,16 @@ Or use the Management UI → Database panel to update the role field directly.
 - [x] Write tests for client portal features (14 tests covering all scenarios)
 - [x] Test booking history display and reschedule workflow
 - [x] All 52 tests passing (14 client portal + 10 email + 7 booking + 20 admin + 1 auth)
+
+
+## Completed - Availability Calendar Feature
+
+- [x] Create tRPC procedures to fetch available time slots by date (getPublic, getAvailableSlots)
+- [x] Build AvailabilityCalendar component with date picker and time slot display
+- [x] Integrate calendar into Booking form to show real-time availability
+- [x] Add validation to prevent booking unavailable slots (filters booked appointments)
+- [x] Display booked slots as unavailable in calendar
+- [x] Admin can manage availability slots via existing admin procedures
+- [x] Write tests for availability calendar features (19 comprehensive tests)
+- [x] Test real-time availability updates
+- [x] All 71 tests passing (19 availability + 14 client portal + 10 email + 7 booking + 20 admin + 1 auth)

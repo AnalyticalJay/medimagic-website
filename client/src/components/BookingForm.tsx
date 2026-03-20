@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -7,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { trpc } from "@/lib/trpc";
 import { useState } from "react";
 import { toast } from "sonner";
+import AvailabilityCalendar from "./AvailabilityCalendar";
 
 interface BookingFormProps {
   serviceType?: string;
@@ -83,23 +83,12 @@ export default function BookingForm({ serviceType = "", onSuccess }: BookingForm
     { label: "Health Education & Promotion", value: "Health Education & Promotion" },
   ];
 
-  const timeSlots = [
-    "09:00 AM",
-    "10:00 AM",
-    "11:00 AM",
-    "12:00 PM",
-    "02:00 PM",
-    "03:00 PM",
-    "04:00 PM",
-    "05:00 PM",
-  ];
-
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
         <CardTitle>Book Your Consultation</CardTitle>
         <CardDescription>
-          Schedule a consultation with Cornelia. Fill in your details and preferred date/time.
+          Schedule a consultation with Cornelia. Fill in your details and select your preferred date/time from available slots.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -171,33 +160,15 @@ export default function BookingForm({ serviceType = "", onSuccess }: BookingForm
             </Select>
           </div>
 
-          {/* Preferred Date */}
+          {/* Availability Calendar */}
           <div className="space-y-2">
-            <Label htmlFor="date">Preferred Date *</Label>
-            <Input
-              id="date"
-              type="date"
-              value={formData.preferredDate}
-              onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-              required
+            <Label>Select Date & Time *</Label>
+            <AvailabilityCalendar
+              selectedDate={formData.preferredDate}
+              selectedTime={formData.preferredTime}
+              onDateChange={(date) => setFormData({ ...formData, preferredDate: date })}
+              onTimeChange={(time) => setFormData({ ...formData, preferredTime: time })}
             />
-          </div>
-
-          {/* Preferred Time */}
-          <div className="space-y-2">
-            <Label htmlFor="time">Preferred Time *</Label>
-            <Select value={formData.preferredTime} onValueChange={(value) => setFormData({ ...formData, preferredTime: value })}>
-              <SelectTrigger id="time">
-                <SelectValue placeholder="Select a time" />
-              </SelectTrigger>
-              <SelectContent>
-                {timeSlots.map((time) => (
-                  <SelectItem key={time} value={time}>
-                    {time}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
           </div>
 
           {/* Message */}
@@ -213,13 +184,13 @@ export default function BookingForm({ serviceType = "", onSuccess }: BookingForm
           </div>
 
           {/* Submit Button */}
-          <Button
+          <button
             type="submit"
-            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+            className="w-full px-6 py-3 bg-accent hover:bg-accent/90 text-accent-foreground font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Confirm Booking"}
-          </Button>
+          </button>
         </form>
       </CardContent>
     </Card>
