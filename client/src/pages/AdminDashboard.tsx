@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Filter, RefreshCw, Settings } from "lucide-react";
-import { AvailabilityManager } from "@/components/AvailabilityManager";
+import AvailabilityManager from "@/components/AvailabilityManager";
 
 const SERVICE_TYPES = [
   "Divorce Settlement Agreements",
@@ -99,7 +99,7 @@ export default function AdminDashboard() {
         {/* Availability Manager Section */}
         {showAvailabilityManager && (
           <div className="mb-8">
-            <AvailabilityManager onClose={() => setShowAvailabilityManager(false)} />
+            <AvailabilityManager />
           </div>
         )}
 

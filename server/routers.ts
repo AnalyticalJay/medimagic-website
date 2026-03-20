@@ -2,7 +2,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { COOKIE_NAME } from "@shared/const";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router, adminProcedure } from "./_core/trpc";
-import { createBooking, getBookings, updateBookingStatus, getBookingsByDateRange, getBookingsByService, getAvailability, setAvailability, getClientBookings, updateBookingDetails } from "./db";
+import { createBooking, getBookings, updateBookingStatus, getBookingsByDateRange, getBookingsByService, getAvailability, setAvailability, getClientBookings, updateBookingDetails, setBulkAvailability, deleteAvailability, getAvailabilityByDateRange } from "./db";
 import { sendBookingConfirmationEmail, sendAdminNotificationEmail, sendStatusUpdateEmail } from "./email";
 import { z } from "zod";
 
@@ -179,6 +179,47 @@ export const appRouter = router({
       .mutation(async ({ input }) => {
         await setAvailability(input.date, input.timeSlot, input.isAvailable);
         return { success: true, message: "Availability updated" };
+      }),
+    setBulk: adminProcedure
+      .input(
+        z.object({
+          startDate: z.string(),
+          endDate: z.string(),
+          timeSlots: z.array(z.string()),
+          recurringPattern: z.enum(["daily", "weekdays", "weekends", "none"]),
+          daysOfWeek: z.array(z.number()).optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        const result = await setBulkAvailability(
+          input.startDate,
+          input.endDate,
+          input.timeSlots,
+          input.recurringPattern,
+          input.daysOfWeek
+        );
+        return { success: true, message: `Created ${result.createdCount} availability slots`, createdCount: result.createdCount };
+      }),
+    delete: adminProcedure
+      .input(
+        z.object({
+          date: z.string(),
+          timeSlot: z.string().optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        await deleteAvailability(input.date, input.timeSlot);
+        return { success: true, message: "Availability deleted" };
+      }),
+    getByDateRange: adminProcedure
+      .input(
+        z.object({
+          startDate: z.string(),
+          endDate: z.string(),
+        })
+      )
+      .query(async ({ input }) => {
+        return await getAvailabilityByDateRange(input.startDate, input.endDate);
       }),
   }),
 

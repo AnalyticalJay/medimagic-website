@@ -220,3 +220,97 @@ export async function updateBookingDetails(id: number, updates: { preferredDate?
   const result = await db.update(bookings).set(updateData).where(eq(bookings.id, id));
   return result;
 }
+
+
+// Bulk availability management
+export async function setBulkAvailability(
+  startDate: string,
+  endDate: string,
+  timeSlots: string[],
+  recurringPattern: "daily" | "weekdays" | "weekends" | "none",
+  daysOfWeek?: number[] // 0-6, where 0 = Sunday
+) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const dates: string[] = [];
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+
+  // Generate dates based on recurring pattern
+  for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+    const dateStr = d.toISOString().split("T")[0];
+    const dayOfWeek = d.getDay();
+
+    let shouldInclude = false;
+    if (recurringPattern === "daily") {
+      shouldInclude = true;
+    } else if (recurringPattern === "weekdays") {
+      shouldInclude = dayOfWeek >= 1 && dayOfWeek <= 5; // Monday-Friday
+    } else if (recurringPattern === "weekends") {
+      shouldInclude = dayOfWeek === 0 || dayOfWeek === 6; // Saturday-Sunday
+    } else if (recurringPattern === "none") {
+      shouldInclude = true;
+    } else if (daysOfWeek && daysOfWeek.length > 0) {
+      shouldInclude = daysOfWeek.includes(dayOfWeek);
+    }
+
+    if (shouldInclude) {
+      dates.push(dateStr);
+    }
+  }
+
+  // Insert or update availability for each date and time slot
+  const results = [];
+  for (const date of dates) {
+    for (const timeSlot of timeSlots) {
+      const existing = await db.select().from(availability)
+        .where(and(eq(availability.date, date), eq(availability.timeSlot, timeSlot)));
+
+      if (existing.length > 0) {
+        const result = await db.update(availability)
+          .set({ isAvailable: 1 })
+          .where(and(eq(availability.date, date), eq(availability.timeSlot, timeSlot)));
+        results.push(result);
+      } else {
+        const result = await db.insert(availability).values({
+          date,
+          timeSlot,
+          isAvailable: 1,
+        });
+        results.push(result);
+      }
+    }
+  }
+
+  return { createdCount: dates.length * timeSlots.length, dates };
+}
+
+export async function deleteAvailability(date: string, timeSlot?: string) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  if (timeSlot) {
+    return await db.delete(availability)
+      .where(and(eq(availability.date, date), eq(availability.timeSlot, timeSlot)));
+  } else {
+    return await db.delete(availability).where(eq(availability.date, date));
+  }
+}
+
+export async function getAvailabilityByDateRange(startDate: string, endDate: string) {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return await db.select().from(availability)
+    .where(and(
+      gte(availability.date, startDate),
+      lte(availability.date, endDate)
+    ));
+}
