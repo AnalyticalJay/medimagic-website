@@ -304,6 +304,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Welcome to MediMagic Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container px-4 md:px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Welcome Text */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Welcome to MediMagic
+              </h2>
+              <p className="text-lg text-muted-foreground mb-4">
+                MediMagic is a uniquely integrated practice combining family law mediation and professional social work support. Our approach addresses both the <strong>practical decisions</strong> and the <strong>emotional realities</strong> that arise during conflict, separation, illness, or major life change.
+              </p>
+              <p className="text-lg text-muted-foreground mb-8">
+                We focus on helping individuals move forward with clarity, dignity, and stability through structured, ethical, and client-centred care.
+              </p>
+              <button 
+                onClick={() => navigate('/about')}
+                className="px-6 py-3 bg-[#5DBB63] text-white font-semibold rounded-full hover:bg-[#4da852] transition-colors inline-flex items-center gap-2"
+              >
+                Learn About Cornelia
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            
+            {/* Right Column - Key Features with Icons */}
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-16 h-16 text-[#5DBB63]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Confidential & Safe</h3>
+                  <p className="text-muted-foreground">All sessions are conducted with strict confidentiality and professional ethics.</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-16 h-16 text-[#5DBB63]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Emotionally Intelligent</h3>
+                  <p className="text-muted-foreground">We address both practical decisions and emotional wellbeing throughout your journey.</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-16 h-16 text-[#5DBB63]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Highly Qualified</h3>
+                  <p className="text-muted-foreground">FAMAC Accredited Mediator and SASW Registered Social Worker with 20+ years experience.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Mediation Services Section */}
       <section className="py-0 bg-white">
         {/* Section Header with Green Line and Navy Background */}
