@@ -229,9 +229,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Left Column - Text */}
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                MEDI MAGIC
-              </h1>
+              <div className="inline-block">
+                <button className="px-8 py-4 bg-gradient-to-r from-[#5DBB63] to-[#4da852] text-white font-bold text-3xl md:text-4xl lg:text-5xl rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 leading-tight font-poppins">
+                  MEDI MAGIC
+                </button>
+              </div>
               <h2 className="text-2xl md:text-3xl font-bold leading-tight">
                 STEADY SUPPORT THROUGH LIFE'S MOST DIFFICULT TRANSITIONS
               </h2>
