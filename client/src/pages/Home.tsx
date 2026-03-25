@@ -62,14 +62,8 @@ export default function Home() {
       {/* Navigation - Green Header with Right-Aligned Menu */}
       <nav className="sticky top-0 z-50 bg-[#5DBB63] header-shadow">
         <div className="container flex items-center justify-between h-16 px-4 md:px-6">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/medimagic_logo_e9a0b25b.webp" 
-              alt="MediMagic Logo"
-              className="h-10 w-auto"
-            />
-          </div>
+          {/* Logo Removed */}
+          <div></div>
 
           {/* Desktop Menu - Right Aligned */}
           <div className="hidden md:flex items-center gap-8 ml-auto">
@@ -232,7 +226,7 @@ export default function Home() {
       {/* Hero Section - Dark Navy */}
       <section className="bg-[#1a3a52] text-white py-16 md:py-24">
         <div className="container px-4 md:px-6">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Left Column - Text */}
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -262,8 +256,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column - Image and SCARS/STARS Box */}
-            <div className="space-y-6">
+            {/* Right Column - Image */}
+            <div>
               {/* Image with Green Border */}
               <div className="border-8 border-[#5DBB63] rounded-lg overflow-hidden">
                 <img 
@@ -272,23 +266,25 @@ export default function Home() {
                   className="w-full h-auto object-cover"
                 />
               </div>
+            </div>
+          </div>
 
-              {/* SCARS to STARS Box */}
-              <div className="bg-[#5DBB63] text-white p-6 rounded-lg">
-                <p className="text-center text-lg font-bold">
-                  Changing <span className="text-2xl">SCARS</span> into <span className="text-2xl">STARS</span> One <span className="text-2xl">BATTLE</span> at a time
-                </p>
-                <div className="flex justify-center gap-4 mt-4">
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                </div>
+          {/* SCARS to STARS Box - Centered Below */}
+          <div className="flex justify-center mt-12">
+            <div className="bg-white text-[#5DBB63] p-8 rounded-lg w-full md:w-4/5 lg:w-4/5">
+              <p className="text-center text-lg font-bold">
+                Changing <span className="text-2xl">SCARS</span> into <span className="text-2xl">STARS</span> One <span className="text-2xl">BATTLE</span> at a time
+              </p>
+              <div className="flex justify-center gap-4 mt-4">
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
               </div>
             </div>
           </div>
