@@ -47,7 +47,7 @@ export default function AdminDashboard() {
   );
   const { data: serviceBookings } = trpc.booking.getByService.useQuery(
     { serviceType: filterService },
-    { enabled: !!filterService }
+    { enabled: !!filterService && filterService !== "all" }
   );
 
   // Mutations
@@ -128,7 +128,7 @@ export default function AdminDashboard() {
                   <SelectValue placeholder="All Services" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Services</SelectItem>
+                  <SelectItem value="all">All Services</SelectItem>
                   {SERVICE_TYPES.map((service) => (
                     <SelectItem key={service} value={service}>
                       {service}
@@ -146,7 +146,7 @@ export default function AdminDashboard() {
                   <SelectValue placeholder="All Statuses" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Statuses</SelectItem>
+                  <SelectItem value="all">All Statuses</SelectItem>
                   <SelectItem value="pending">Pending</SelectItem>
                   <SelectItem value="confirmed">Confirmed</SelectItem>
                   <SelectItem value="completed">Completed</SelectItem>
