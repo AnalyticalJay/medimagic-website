@@ -224,7 +224,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section - Dark Navy */}
-      <section className="bg-[#1a3a52] text-white py-16 md:py-24">
+      <section className="bg-[#1a3a52] text-white py-16 md:py-24 relative">
         <div className="container px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* Left Column - Text */}
@@ -256,8 +256,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Column - Image */}
-            <div>
+            {/* Right Column - Image with Icon Badge */}
+            <div className="relative">
               {/* Image with Green Border */}
               <div className="border-8 border-[#5DBB63] rounded-lg overflow-hidden">
                 <img 
@@ -265,6 +265,17 @@ export default function Home() {
                   alt="From Old Story to New Story - Transformation Journey"
                   className="w-full h-auto object-cover"
                 />
+              </div>
+              
+              {/* MediMagic Icon Badge - Top Right */}
+              <div className="absolute -top-6 -right-6 md:-top-8 md:-right-8">
+                <div className="bg-white border-8 border-[#5DBB63] rounded-full w-32 h-32 md:w-40 md:h-40 flex items-center justify-center shadow-lg">
+                  <img 
+                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/medimagic_logo_e9a0b25b.webp" 
+                    alt="MediMagic Logo"
+                    className="w-20 h-20 md:w-28 md:h-28 object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>

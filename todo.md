@@ -250,6 +250,7 @@ Or use the Management UI → Database panel to update the role field directly.
 - [x] Apply animated text effects to SCARS, STARS, BATTLE words with staggered delays
 - [x] Enhance visual design with gradient background (primary/5 to teal-500/5)
 - [x] Add eye-catching visual elements (animated decorative stars)
+- [x] Add MediMagic icon badge to hero section with white background and green border
 - [x] All animations smooth and performant
 - [x] Section is now more visually striking and memorable
 
