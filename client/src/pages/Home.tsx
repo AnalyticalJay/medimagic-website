@@ -261,8 +261,8 @@ export default function Home() {
               {/* Image with Green Border */}
               <div className="border-8 border-[#5DBB63] rounded-lg overflow-hidden">
                 <img 
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/HandStar_877534a4.webp" 
-                  alt="Transformation"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/Homepagehero_480b260e.png" 
+                  alt="From Old Story to New Story - Transformation Journey"
                   className="w-full h-auto object-cover"
                 />
               </div>
