@@ -305,7 +305,7 @@ export default function Home() {
       </section>
 
       {/* Mediation Services Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-0 bg-white">
         {/* Section Header with Green Line and Navy Background */}
         <div className="bg-[#5DBB63] h-2 mb-0"></div>
         <div className="bg-[#1a3a52] text-white py-6 mb-12">
