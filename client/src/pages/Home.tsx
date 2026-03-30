@@ -413,6 +413,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Social Work Services Section */}
+      <section className="py-0 bg-white">
+        {/* Section Header with Green Line and Navy Background */}
+        <div className="bg-[#5DBB63] h-2 mb-0"></div>
+        <div className="bg-[#1a3a52] text-white py-6 mb-12">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl md:text-4xl font-bold">SOCIAL WORK SERVICES</h2>
+          </div>
+        </div>
+
+        <div className="container px-4 md:px-6">
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Adult Divorce Preparation",
+                description: "Emotional and practical support for adults navigating the complexities of divorce and separation.",
+                link: "/services/adult-divorce-preparation"
+              },
+              {
+                title: "Illness & Disability Support",
+                description: "Compassionate guidance for individuals and families coping with illness, disability, and life transitions.",
+                link: "/services/illness-disability"
+              },
+              {
+                title: "Palliative & End-of-Life Care",
+                description: "Holistic support for patients, families, and caregivers during end-of-life journeys.",
+                link: "/services/palliative-care"
+              },
+              {
+                title: "Health Education & Promotion",
+                description: "Educational programs promoting mental health, wellbeing, and healthy life transitions.",
+                link: "/services/health-education"
+              }
+            ].map((service, idx) => (
+              <div key={idx} className="bg-[#1a3a52] text-white rounded-lg p-6 flex flex-col">
+                <div className="border-4 border-[#5DBB63] rounded-lg mb-4 h-32 bg-gray-200"></div>
+                <h3 className="text-lg font-bold mb-3">{service.title}</h3>
+                <p className="text-sm text-white/80 mb-4 flex-grow">{service.description}</p>
+                <button 
+                  onClick={() => navigate(service.link)}
+                  className="bg-[#5DBB63] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#4da852] transition-colors text-sm"
+                >
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose MediMagic Section */}
       <section className="py-16 md:py-24 bg-white">
         {/* Section Header with Green Line and Navy Background */}

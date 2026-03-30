@@ -431,3 +431,12 @@ Or use the Management UI → Database panel to update the role field directly.
 - [x] Update FAQ item cards to darker navy background
 - [x] Update text colors for better contrast
 - [x] All 89 tests passing
+
+
+## Completed - Social Work Services Section Styling
+
+- [x] Add new Social Work Services section after Mediation Services
+- [x] Use same styling: green line header, navy background, 4-card grid layout
+- [x] Add services: Adult Divorce Preparation, Illness & Disability Support, Palliative Care, Health Education & Promotion
+- [x] Test and verify styling matches Mediation Services
+- [x] All 89 tests passing
