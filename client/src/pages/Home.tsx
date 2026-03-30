@@ -284,16 +284,12 @@ export default function Home() {
 
           {/* SCARS to STARS Box - Centered Below */}
           <div className="flex justify-center mt-12">
-            <div className="bg-white text-[#5DBB63] p-8 rounded-lg w-full md:w-4/5 lg:w-4/5">
-              <p className="text-center text-xl md:text-2xl font-semibold flex items-center justify-center gap-3 flex-wrap">
-                <svg className="w-8 h-8 md:w-10 md:h-10 text-[#5DBB63]" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-                <span className="italic">Changing</span> <span className="font-bold">SCARS</span> <span className="italic">into</span> <span className="font-bold">STARS</span> <span className="text-lg">-</span> <span>One</span> <span className="font-bold">BATTLE</span> <span>at a time.</span>
-                <svg className="w-8 h-8 md:w-10 md:h-10 text-[#5DBB63]" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </p>
+            <div className="w-full md:w-4/5 lg:w-4/5">
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/Footer_f32a9084.webp"
+                alt="Changing SCARS into STARS - One BATTLE at a time"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
