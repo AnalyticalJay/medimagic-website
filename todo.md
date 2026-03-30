@@ -403,3 +403,13 @@ Or use the Management UI → Database panel to update the role field directly.
 - [x] Include icons for each feature (shield, checkmark, medal)
 - [x] Add "Learn About Cornelia" button with arrow icon
 - [x] All 89 tests passing
+
+
+## Completed - SCARS to STARS Text Styling Update
+
+- [x] Delete star rating icons below the text
+- [x] Update text styling with italic for "Changing" and "into"
+- [x] Make "SCARS", "STARS", and "BATTLE" bold
+- [x] Add green star icons on both sides of the text
+- [x] Adjust spacing and font styling to match design
+- [x] All 89 tests passing
