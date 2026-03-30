@@ -448,3 +448,12 @@ Or use the Management UI → Database panel to update the role field directly.
 - [x] Upload images to CDN
 - [x] Add images to Mediation Services cards with green borders
 - [x] All 89 tests passing
+
+
+## Completed - Update SCARS to STARS Text Styling
+
+- [x] Change font to Apricot
+- [x] Place text in a row within hero section
+- [x] Add green stars at beginning and end of sentence
+- [x] Ensure responsive sizing (text-xl md:text-2xl lg:text-3xl)
+- [x] All 89 tests passing

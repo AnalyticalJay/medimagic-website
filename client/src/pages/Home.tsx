@@ -284,12 +284,16 @@ export default function Home() {
 
           {/* SCARS to STARS Box - Centered Below */}
           <div className="flex justify-center mt-12">
-            <div className="w-full md:w-4/5 lg:w-4/5">
-              <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/Footer_f32a9084.webp"
-                alt="Changing SCARS into STARS - One BATTLE at a time"
-                className="w-full h-auto"
-              />
+            <div className="w-full md:w-4/5 lg:w-4/5 flex items-center justify-center gap-4 md:gap-6">
+              <svg className="w-12 h-12 md:w-16 md:h-16 text-[#5DBB63] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              <p className="text-center text-xl md:text-2xl lg:text-3xl text-white" style={{fontFamily: 'Apricot, cursive', fontWeight: '400'}}>
+                Changing <span className="font-bold">SCARS</span> into <span className="font-bold">STARS</span> - One <span className="font-bold">BATTLE</span> at a time.
+              </p>
+              <svg className="w-12 h-12 md:w-16 md:h-16 text-[#5DBB63] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
             </div>
           </div>
         </div>
