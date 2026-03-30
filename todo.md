@@ -440,3 +440,11 @@ Or use the Management UI → Database panel to update the role field directly.
 - [x] Add services: Adult Divorce Preparation, Illness & Disability Support, Palliative Care, Health Education & Promotion
 - [x] Test and verify styling matches Mediation Services
 - [x] All 89 tests passing
+
+
+## Completed - Add Service Images to Cards
+
+- [x] Find images for: Divorce Settlement, Parenting Plan, Maintenance Agreements, Voice of the Child
+- [x] Upload images to CDN
+- [x] Add images to Mediation Services cards with green borders
+- [x] All 89 tests passing

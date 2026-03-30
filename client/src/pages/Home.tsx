@@ -379,26 +379,32 @@ export default function Home() {
               {
                 title: "Divorce Settlement Agreements",
                 description: "Structured mediation to help couples reach fair, legally sound divorce agreements.",
-                link: "/services/divorce-settlement"
+                link: "/services/divorce-settlement",
+                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/divorce-settleent_b2a8180f.png"
               },
               {
                 title: "Parenting Plan",
                 description: "Child-centred co-parenting frameworks prioritising children's wellbeing.",
-                link: "/services/parenting-plans"
+                link: "/services/parenting-plans",
+                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/ParentingPLans_655d4092.png"
               },
               {
                 title: "Maintenance Agreements",
                 description: "Structured mediation to help couples reach fair, legally sound divorce agreements.",
-                link: "/services/maintenance-agreements"
+                link: "/services/maintenance-agreements",
+                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/MaintenanceAgreements_f8770d4d.png"
               },
               {
                 title: "Voice of the child Assessments",
                 description: "Structured mediation to help couples reach fair, legally sound divorce agreements.",
-                link: "/services/voice-of-child"
+                link: "/services/voice-of-child",
+                image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663349340425/ZpznwMcSz4FYagEgbyVyar/Voiceofchildinterviews_8a559010.png"
               }
             ].map((service, idx) => (
               <div key={idx} className="bg-[#1a3a52] text-white rounded-lg p-6 flex flex-col">
-                <div className="border-4 border-[#5DBB63] rounded-lg mb-4 h-32 bg-gray-200"></div>
+                <div className="border-4 border-[#5DBB63] rounded-lg mb-4 h-32 bg-gray-200 overflow-hidden">
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                </div>
                 <h3 className="text-lg font-bold mb-3">{service.title}</h3>
                 <p className="text-sm text-white/80 mb-4 flex-grow">{service.description}</p>
                 <button 
