@@ -53,7 +53,7 @@ export default function Home() {
     },
     {
       question: "What qualifications does Cornelia hold?",
-      answer: "Cornelia is a FAMAC Accredited Mediator and SASW Registered Social Worker with over 20 years of professional experience in medical social work, family mediation, and child-centred practice. She is bound by strict professional ethical codes and regulatory standards."
+      answer: "Cornelia holds a Masters degree and is a FAMAC Accredited Mediator and SASW Registered Social Worker with over 20 years of professional experience in medical social work, family mediation, and child-centred practice. She is bound by strict professional ethical codes and regulatory standards."
     }
   ];
 
@@ -445,7 +445,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-[#1a3a52]">
         {/* Section Header with Green Line and Navy Background */}
         <div className="bg-[#5DBB63] h-2 mb-0"></div>
         <div className="bg-[#1a3a52] text-white py-6 mb-12">
@@ -457,12 +457,12 @@ export default function Home() {
         <div className="container px-4 md:px-6 max-w-3xl">
           <div className="space-y-4">
             {faqItems.map((item, idx) => (
-              <div key={idx} className="bg-white rounded-lg border border-gray-200">
+              <div key={idx} className="bg-[#0f2a3a] rounded-lg border border-[#2a4a5a]">
                 <button
                   onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
-                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-[#1a3a4a] transition-colors"
                 >
-                  <h3 className="text-lg font-semibold text-[#1a3a52] text-left">{item.question}</h3>
+                  <h3 className="text-lg font-semibold text-white text-left">{item.question}</h3>
                   {openFaqIndex === idx ? (
                     <Minus className="w-5 h-5 text-[#5DBB63] flex-shrink-0" />
                   ) : (
@@ -470,8 +470,8 @@ export default function Home() {
                   )}
                 </button>
                 {openFaqIndex === idx && (
-                  <div className="px-6 py-4 border-t border-gray-200 bg-gray-50">
-                    <p className="text-gray-700">{item.answer}</p>
+                  <div className="px-6 py-4 border-t border-[#2a4a5a] bg-[#0a1f2a]">
+                    <p className="text-gray-300">{item.answer}</p>
                   </div>
                 )}
               </div>

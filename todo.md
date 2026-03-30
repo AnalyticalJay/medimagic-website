@@ -421,3 +421,13 @@ Or use the Management UI → Database panel to update the role field directly.
 - [x] Replace text section with image in hero section
 - [x] Ensure responsive sizing for mobile and desktop
 - [x] All 89 tests passing
+
+
+## Completed - FAQ Section Updates
+
+- [x] Change FAQ section background to navy (#1a3a52)
+- [x] Update + icons to brand green (#5DBB63) - already green
+- [x] Add "Masters degree" to Qualifications question answer
+- [x] Update FAQ item cards to darker navy background
+- [x] Update text colors for better contrast
+- [x] All 89 tests passing
